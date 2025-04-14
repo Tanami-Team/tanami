@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'BahijTheSansArabic';
+    src: url('assets/fonts/BahijTheSansArabic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'BahijTheSansArabic', sans-serif;
+    direction: rtl;
+  }
+  
+
+
+  .p-iconwrapper {
+    background-color: #02527D !important;
+    padding: 5px !important;
+    color: white !important;
+}

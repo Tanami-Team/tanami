@@ -1,0 +1,86 @@
+<div>
+  <div *ngIf="version">
+
+    <app-section-title  mainText="أحدث" secondaryText="البرامج" marignAuto="mx-auto" [showRightDecoration]="true" [mainheader]="true"></app-section-title>
+    <p class="text-[#383838] text-[15px] text-center">تساهم مسك المهارات في تمكين الشباب من اكتشاف اهتماماتهم, تطوير مهاراتهم, صقل قدراتهم, وتخطيط مستقبلهم الوظيفي</p>
+    
+  </div>
+
+    <div class="grid grid-cols-3 py-10 gap-10  mx-auto">
+        <div *ngFor="let card of cardData" class="bg-white rounded-2xl shadow-xl overflow-hidden w-full mx-auto pb-3">
+          <!-- Header Section with Gradient Background -->
+          <div class="text-white">
+            <div class="flex items-center justify-between">
+              <img [src]="card.image" alt="Logo" class="w-full" />
+            </div>
+          </div>
+      
+          <!-- Body Section -->
+          <div class="flex flex-col text-center py-5">
+            <div class="flex items-center">
+                <div [ngStyle]="{ 'background': card.bg }" class="h-28 w-2.5"></div>
+                <div class="flex flex-col p-5 w-[95%] mx-auto">
+                <h2 class="text-3xl font-bold text-[#383838] mb-3">{{ card.title }}</h2>
+                <p class="text-[12px] leading-relaxed text-[#383838] mb-5">{{ card.description }}</p>
+              </div>
+            </div>
+      
+            <!-- Stats Section -->
+            <div class="flex justify-evenly items-center mb-4">
+              <div class="text-center flex flex-col items-center gap-1">
+                <div class="flex justify-between gap-2 items-center">
+                  <!-- Icon for الوكلاء -->
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5928 3.96825C10.5448 3.96138 10.4967 3.96138 10.4486 3.96825C9.38449 3.93387 8.54004 3.06044 8.54004 1.98757C8.54004 0.894061 9.42569 0 10.5242 0C11.6158 0 12.5083 0.887183 12.5083 1.98757C12.5014 3.06044 11.657 3.93387 10.5928 3.96825Z" fill="#FFD156" />
+                    <path d="M12.7385 7.87502C12.0138 8.34087 10.9979 8.51478 10.0597 8.39677C10.3056 7.88744 10.435 7.32222 10.4415 6.72594C10.4415 6.10481 10.2991 5.51474 10.0273 4.9992C10.985 4.87498 12.0008 5.04889 12.732 5.51474C13.7543 6.16071 13.7543 7.22284 12.7385 7.87502Z" fill="#FFD156" />
+                    <path d="M3.01055 3.96825C3.05869 3.96138 3.10683 3.96138 3.15497 3.96825C4.22097 3.93387 5.06689 3.06044 5.06689 1.98757C5.06689 0.887183 4.1797 0 3.07932 0C1.98582 0 1.09863 0.887183 1.09863 1.98757C1.09863 3.06044 1.94455 3.93387 3.01055 3.96825Z" fill="#FFD156" />
+                    <path d="M3.15775 6.72282C3.15775 7.3242 3.29838 7.89459 3.55286 8.40918C2.60863 8.50218 1.62422 8.31619 0.900977 7.87599C-0.157097 7.22501 -0.157097 6.16483 0.900977 5.51384C1.61752 5.06745 2.62872 4.88765 3.57964 4.98685C3.30508 5.50764 3.15775 6.09663 3.15775 6.72282Z" fill="#FFD156" />
+                  </svg>
+                  <span class="text-[12px] text-[#383838]"> الوكلاء</span>
+                </div>
+                <span class="text-lg font-semibold">{{ card.value_partenrs }}</span>
+              </div>
+              <div class="h-10 bg-[#02527D] w-[1.2px]"></div>
+      
+              <div class="text-center flex flex-col items-center gap-1">
+                <div class="flex justify-between gap-2 items-center">
+                  <!-- Icon for الشركات التابعة -->
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.25356 1.84821L3.09829 0.315239C1.39601 -0.503747 0 0.329239 0 2.16321V12.551C0 13.349 0.676638 14 1.50285 14H6.78775C7.17949 14 7.5 13.685 7.5 13.3V3.78718C7.5 3.05219 6.93732 2.17721 6.25356 1.84821ZM4.98575 8.2251H2.51425C2.22222 8.2251 1.98006 7.9871 1.98006 7.70011C1.98006 7.41312 2.22222 7.17512 2.51425 7.17512H4.98575C5.27778 7.17512 5.51994 7.41312 5.51994 7.70011C5.51994 7.9871 5.2849 8.2251 4.98575 8.2251ZM4.98575 5.42515H2.51425C2.22222 5.42515 1.98006 5.18715 1.98006 4.90016C1.98006 4.61316 2.22222 4.37517 2.51425 4.37517H4.98575C5.27778 4.37517 5.51994 4.61316 5.51994 4.90016C5.51994 5.18715 5.2849 5.42515 4.98575 5.42515Z" fill="#FFD156" />
+                  </svg>
+                  <span class="text-[12px] text-[#383838]"> الشركات التابعة</span>
+                </div>
+                <span class="text-lg font-semibold">{{ card.value_company }}</span>
+              </div>
+              <div class="h-10 bg-[#02527D] w-[1.2px]"></div>
+      
+              <div class="text-center flex flex-col items-center gap-1">
+                <div class="flex justify-between gap-2 items-center">
+                  <!-- Icon for المستخدمين -->
+                  <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.29999 0C1.47979 0 0 1.34668 0 3.00316C0 4.62802 1.39642 5.94309 3.21663 5.99999C3.2722 5.99367 3.32778 5.99367 3.36947 5.99999C3.38336 5.99999 3.39031 5.99999 3.4042 5.99999C3.41115 5.99999 3.41115 5.99999 3.4181 5.99999C5.19662 5.94309 6.59304 4.62802 6.59999 3.00316C6.59999 1.34668 5.1202 0 3.29999 0Z" fill="#FFD156" />
+                  </svg>
+                  <span class="text-[12px] text-[#383838]"> مستخدمين</span>
+                </div>
+                <span class="text-lg font-semibold">{{ card.value_user }}</span>
+              </div>
+            </div>
+            
+            <!-- Discover More Button -->
+<a [routerLink]="'/PorgramDetails/' + card.id" class="bg-[#02527D] w-[85%] mx-auto text-white py-2 px-6 rounded-sm text-sm font-semibold hover:bg-[#2B959C] transition duration-300">
+  أكتشف المزيد
+</a>
+          </div>
+        </div>
+      </div>
+      
+  
+      
+
+
+
+
+
+
+
+</div>

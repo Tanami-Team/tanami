@@ -1,0 +1,33 @@
+<app-header-tanami description="تساهم مسك المهارات في تمكين الشباب من اكتشاف اهتماماتهم, تطوير مهاراتهم, صقل قدراتهم, وتخطيط مستقبلهم الوظيفي"  headerText="الحوكمة" imageSrc="assets/images/header3.png" backgroundGradient="radial-gradient(circle at 15% 50%, #148B84 15%, #148B84 50%)"></app-header-tanami>
+<app-about-header></app-about-header>
+<div class=" py-10">
+    <div class="w-fit mx-auto">
+        <app-section-title  mainText="مكتبة" secondaryText="المستندات" ></app-section-title>
+
+    </div>
+    <p class="text-center text-[#383838]  text-sm">كتابة المزيد من المحتوي للوصول الي المعلومة المطلوبة </p>
+    <div class="grid grid-cols-3 gap-6 w-[75%] mx-auto py-5">
+        <!-- Repeat this div 16 times using *ngFor -->
+        <div *ngFor="let doc of documents" 
+          class="bg-white hover:bg-[#FFD156] cursor-pointer w-full py-5 px-2 rounded-lg shadow-md flex flex-col gap-2.5 justify-between group transition-transform duration-300 ease-in-out transform hover:scale-105">
+          
+          <div class="flex gap-2.5 items-center">
+            <img [src]="doc.icon" alt="Book Icon" class="w-10 h-10">
+            <h3 class="text-xl font-semibold text-gray-800">{{ doc.title }}</h3>
+          </div>
+          
+          <div class="flex items-center text-yellow-500 w-[35%] ms-auto gap-2 group-hover:text-white">
+            <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.8 0H10.75V4.44L12.82 2.37C12.97 2.22 13.16 2.15 13.35 2.15C13.54 2.15 13.73 2.22 13.88 2.37C14.17 2.66 14.17 3.14 13.88 3.43L10.53 6.78C10.24 7.07 9.76 7.07 9.47 6.78L6.12 3.43C5.83 3.14 5.83 2.66 6.12 2.37C6.41 2.08 6.89 2.08 7.18 2.37L9.25 4.44V0H5.2C2 0 0 2 0 5.2V7.79C0 11 2 13 5.2 13H14.79C17.99 13 19.99 11 19.99 7.8V5.2C20 2 18 0 14.8 0Z" fill="currentColor"/>
+            </svg>
+            <a [href]="doc.fileLink" class="font-semibold text-sm">تنزيل الملف</a>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+     
+      
+</div>

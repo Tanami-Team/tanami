@@ -1,0 +1,8 @@
+.home-bg {
+    background: linear-gradient(180deg, rgba(78, 181, 250, 0.3) 70%, rgba(43, 149, 156, 0.5) 100%), 
+                url('../../../../assets/images/HomeImages.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  

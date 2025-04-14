@@ -1,0 +1,26 @@
+<div [ngClass]="containerWidth" class="mx-auto">
+    <p-carousel dir="rtl" 
+        [value]="products" 
+        [numVisible]="numVisible" 
+        [numScroll]="1" 
+        [circular]="false"  
+        [autoplayInterval]="3000" 
+        [showNavigators]="showArrows">
+
+      <ng-template let-product pTemplate="item">
+        <div class="relative p-2 px-4 m-2 my-5 flex items-center justify-center">
+          
+          <!-- Background Layer -->
+          <div class="absolute inset-0 bg-[#02527D0F] rounded-lg w-[90%] mx-auto top-5"></div>
+
+          <!-- Border Box -->
+          <div class="relative border border-[#004F75] bg-transparent rounded-lg p-4 shadow-lg flex items-center justify-center">
+            <div class="relative mx-auto w-full h-[100px] flex items-center justify-center">
+              <img [src]="product.image" [alt]="product.name" class="h-full w-60 max-h-40 object-contain mx-auto rounded-lg" />
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+    </p-carousel>
+</div>

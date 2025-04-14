@@ -1,0 +1,275 @@
+<div class="grid grid-cols-12 items-center justify-between bg-gradient-to-br from-white to-[#EAF7FA] p-20 py-24 rounded-md">
+  <!-- Left Text Section -->
+  <div class="relative col-span-5 flex flex-col items-start gap-8 justify-center">
+
+  <!-- Layer Blur Background -->
+  <div class="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-lg -z-10">
+    
+  </div>
+
+  <!-- Header -->
+  <div class="flex items-center justify-between w-full  mb-6 px-4">
+    <a routerLink="/" class="text-[#02527D] text-sm font-bold flex  gap-2 items-center cursor-pointer">
+     
+      رجوع للقائمة
+      <div class="border border-[#02527D] rounded-full p-0.5">
+
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            
+        </div>
+    </a>
+  </div>
+
+  <!-- Logo -->
+  <div>
+    <img src="assets/images/muhkm.png" alt="muhkam logo" class="w-full h-24 object-cover" />
+  </div>
+
+     <button (click)="openModal()" class="cursor-pointer flex items-center gap-2 bg-[#FFD156] hover:bg-yellow-500 text-[#02527D] font-bold py-2 px-4 rounded">
+    
+            
+        اشترك الآن
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.7882 0.315084L3.61592 2.69868C-1.20531 4.31157 -1.20531 6.94147 3.61592 8.54642L5.74457 9.25356L6.45147 11.3829C8.0559 16.2057 10.6929 16.2057 12.2973 11.3829L14.6881 4.21623C15.7524 0.99838 14.005 -0.757532 10.7882 0.315084ZM11.0424 4.58966L8.02413 7.62477C7.90498 7.74395 7.75407 7.79956 7.60316 7.79956C7.45225 7.79956 7.30134 7.74395 7.1822 7.62477C6.95186 7.39435 6.95186 7.01298 7.1822 6.78257L10.2004 3.74746C10.4308 3.51704 10.812 3.51704 11.0424 3.74746C11.2727 3.97787 11.2727 4.35925 11.0424 4.58966Z" fill="#02527D"/>
+            </svg>
+      </button>
+
+</div>
+
+
+
+  <!-- Right Image + Button Section -->
+  <div class="col-span-7 text-right flex flex-col gap-2">
+    <app-section-title   secondaryText=" برنامج محكم" [showRightDecoration]="true" [mainheader]="true"></app-section-title>
+    <div class="flex flex-col pt-2.5 gap-2">
+    <h3 class="text-[#02527D] text-lg font-semibold ">تأسيس وحدات الحوكمة في الجمعيات الأهلية</h3>
+    <p class="text-[#383838] leading-loose text-[15px] ">
+      تأسيس وحدات الحوكمة وتطوير منظومتها في الجمعيات الأهلية عبر بناء هياكلها المؤسسية
+      وحوكمة أعمالها ونقل المعرفة لأدوات الحوكمة والممكنين بالجملة، بانطلاق الجمعية
+      لمعايير الحوكمة المعتمدة والمعمول بها، مع التأكيد والالتزام بتطبيق متطلباتها.
+      وكذلك التفعيل ومراقبة تطبيق سياسات الحوكمة وممارساتها وربطها مع النظام
+      وبيئة انطلاقات أطياف المجتمع. وتقديم خدمات الدعم الاستشاري التفاعلي للحوكمة
+      لمدة عام.
+    </p>
+        </div>
+
+  </div>
+
+
+  
+</div>
+
+
+
+
+<div class="relative w-[85%] py-20 mx-auto ">
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide *ngFor="let product of slides">
+    <div class="slide-content" [id]="'product-' + product.id">
+      <img [src]="product.image" [alt]="product.id" />
+    </div>
+  </ng-template>
+</owl-carousel-o>
+
+
+<!-- 
+    <p-carousel dir="rtl" 
+        [value]="myProducts" 
+        [numVisible]="1" 
+        [numScroll]="1" 
+        [circular]="false"  
+        [autoplayInterval]="4000" 
+        [showNavigators]="false"
+        [showIndicators]="true"
+
+        >
+
+      <ng-template let-product pTemplate="item">
+        <div class="relative p-2 px-4 m-2 my-5 flex items-center justify-center">
+          
+      
+              <img [src]="product.image" [alt]="product.name" class=" w-[55%] h-96 object-contain mx-auto rounded-lg" />
+
+        </div>
+      </ng-template>
+    </p-carousel> -->
+
+<div class="w-[95%] mx-auto grid grid-cols-12 py-10 text-right">
+    <div class="flex items-center justify-start  gap-10  col-span-3">
+      <div class="h-12 border border-[#000000]"></div>
+    <h2 class="text-[#004F75] text-2xl font-bold ml-2"
+    >
+    <span class="font-medium">
+        الهدف
+
+    </span>
+    
+         العام</h2>
+  </div>
+  <p class=" text-gray-600  w-[70%] mx-auto text-justify  col-span-9">
+    تمكين الجمعيات الأهلية من الامتثال لمعايير الحوكمة والالتزام بمتطلباتها من خلال تأطير منظومة عمل الحوكمة ونقل المعرفة لأدوات الحوكمة القائمة بأعمال الحوكمة لتصبح الحوكمة ممارسة منهجية والتزام متواصل.
+  </p>
+</div>
+
+
+
+</div>
+
+
+<div class="relative pt-56 w-full bg-white">
+  <!-- Blue background block behind -->
+  <div class="bg-[#02527D] h-[30vh] w-full"></div>
+
+  <!-- Centered Image overlapping the blue section -->
+  <div class="absolute inset-0 bottom-10 flex justify-center items-end">
+    <div class="w-[90%] md:w-[70%] lg:w-[60%] rounded-xl overflow-hidden shadow-lg">
+      <img src="assets/images/handshake.png" alt="Handshake" class="w-full h-auto object-cover" />
+    </div>
+  </div>
+</div>
+
+<div class="py-10">
+
+       <app-section-title mainText="الأنشطه"  secondaryText="الرئيسية" [showRightDecoration]="true" marignAuto="mx-auto" [mainheader]="true"></app-section-title>
+ 
+ <div class="grid grid-cols-2 gap-9 gap-x-14 w-[60%] mx-auto">
+<div>
+       <button class=" flex items-center justify-center gap-2 border border-[#02527D] text-sm text-[#1A1A1A] px-6 py-4 rounded-tl-[60px] rounded-br-[60px] rounded-tr-md rounded-bl-md">
+           <img src="assets/images/gif1.gif" alt="click icon" class="w-[20%]" />
+  <span class="font-semibold ">اختيار وانتقاء الجمعيات</span>
+</button>
+</div>
+<div>
+       <button class=" flex items-center justify-center gap-2 border border-[#02527D] text-sm text-[#1A1A1A] px-6 py-4 rounded-tl-[60px] rounded-br-[60px] rounded-tr-md rounded-bl-md">
+           <img src="assets/images/gif1.gif" alt="click icon" class="w-[20%]" />
+  <span class="font-semibold ">اختيار وانتقاء الجمعيات</span>
+</button>
+</div>
+<div>
+       <button class=" flex items-center justify-center gap-2 border border-[#02527D] text-sm text-[#1A1A1A] px-6 py-4 rounded-tl-[60px] rounded-br-[60px] rounded-tr-md rounded-bl-md">
+           <img src="assets/images/gif1.gif" alt="click icon" class="w-[20%]" />
+  <span class="font-semibold ">اختيار وانتقاء الجمعيات</span>
+</button>
+</div>
+
+ </div>
+    
+</div>
+
+
+
+<div class="w-full bg-[#018A89] text-white pt-16 text-right">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-">
+
+    <!-- Left Image -->
+   <div class="flex flex-col gap-6 px-8">
+               <app-section-title mainText="مكتبة"  secondaryText="المستندات" [showRightDecoration]="true"  [mainheader]="true" color="white"></app-section-title>
+
+        <p class="text-sm text-[#F4F4F4]">كتابة المزيد من المحتوى للوصول الي المعلوماتة المطلوبة</p>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+      <div *ngFor="let doc of documents" 
+          class="bg-white hover:bg-[#FFD156] cursor-pointer w-full py-5 px-2 rounded-lg shadow-md flex flex-col gap-2.5 justify-between group transition-transform duration-300 ease-in-out transform hover:scale-105">
+          
+          <div class="flex gap-2.5 items-center">
+            <img [src]="doc.icon" alt="Book Icon" class="w-10 h-10">
+            <h3 class="text-xl font-semibold text-gray-800">{{ doc.title }}</h3>
+          </div>
+          
+          <div class="flex items-center text-yellow-500 w-[35%] ms-auto gap-2 group-hover:text-white">
+            <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.8 0H10.75V4.44L12.82 2.37C12.97 2.22 13.16 2.15 13.35 2.15C13.54 2.15 13.73 2.22 13.88 2.37C14.17 2.66 14.17 3.14 13.88 3.43L10.53 6.78C10.24 7.07 9.76 7.07 9.47 6.78L6.12 3.43C5.83 3.14 5.83 2.66 6.12 2.37C6.41 2.08 6.89 2.08 7.18 2.37L9.25 4.44V0H5.2C2 0 0 2 0 5.2V7.79C0 11 2 13 5.2 13H14.79C17.99 13 19.99 11 19.99 7.8V5.2C20 2 18 0 14.8 0Z" fill="currentColor"/>
+            </svg>
+            <a [href]="doc.fileLink" class="font-semibold text-sm">تنزيل الملف</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Right Text and Cards -->
+  
+    <div class="relative  w-fit mx-auto overflow-hidden">
+  <!-- Blurred Colored Background Layer -->
+  <!-- <div class="absolute inset-0 -z-10 bg-[#04D4AB]/40 blur-[110px] rounded-full"></div> -->
+      <div class="absolute h-full -left-40 flex items-center justify-start opacity-55 grayscale">
+      <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
+  </div>
+
+  <!-- Foreground Image -->
+  <img src="assets/images/details.png" alt="Blurred background example" class="w-full relative z-20 rounded-xl" />
+</div>
+  </div>
+</div>
+<app-carousel 
+  [products]="myProducts2" 
+  containerWidth="w-[85%]"
+  [numVisible]="5" 
+  [showArrows]="true">
+</app-carousel>
+
+
+
+
+
+<div class="relative w-full h-[40vh] bg-cover bg-center py-16 text-white" style="background-image: url('assets/images/stats-bg.png')">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-[#02527D]/70"></div>
+
+  <!-- Stats Content -->
+  <div class="relative z-10 w-[85%] mx-auto flex justify-evenly   gap-10 text-center">
+    
+    <!-- Stat Item 1 -->
+         <div class="flex flex-col items-center gap-3.5 ">
+
+<svg width="40" height="50" viewBox="0 0 57 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.6252 16.8887C44.4207 16.8594 44.2161 16.8594 44.0116 16.8887C39.4826 16.7424 35.8887 13.0251 35.8887 8.45899C35.8887 3.80508 39.658 0 44.333 0C48.9789 0 52.7774 3.77581 52.7774 8.45899C52.7482 13.0251 49.1542 16.7424 44.6252 16.8887Z" fill="white"/>
+<path d="M53.7611 33.5156C50.6768 35.4983 46.3534 36.2384 42.3603 35.7362C43.4068 33.5685 43.9576 31.1629 43.9851 28.6252C43.9851 25.9817 43.3793 23.4704 42.2227 21.2763C46.2983 20.7476 50.6218 21.4878 53.7336 23.4704C58.0846 26.2196 58.0846 30.74 53.7611 33.5156Z" fill="white"/>
+<path d="M12.3597 16.8887C12.5646 16.8594 12.7695 16.8594 12.9743 16.8887C17.5112 16.7424 21.1114 13.0251 21.1114 8.45899C21.1114 3.77581 17.3355 0 12.6524 0C7.99847 0 4.22266 3.77581 4.22266 8.45899C4.22266 13.0251 7.82285 16.7424 12.3597 16.8887Z" fill="white"/>
+<path d="M12.9821 28.6119C12.9821 31.1714 13.5806 33.5989 14.6636 35.789C10.645 36.1848 6.45541 35.3932 3.37733 33.5198C-1.12578 30.7492 -1.12578 26.2371 3.37733 23.4666C6.42691 21.5667 10.7305 20.8015 14.7776 21.2237C13.6091 23.4402 12.9821 25.9469 12.9821 28.6119Z" fill="white"/>
+<path d="M28.8436 37.9996C28.623 37.9688 28.3748 37.9688 28.1266 37.9996C23.0527 37.8152 18.999 33.1751 18.999 27.4595C19.0266 21.6209 23.2457 16.8887 28.5127 16.8887C33.7521 16.8887 37.9988 21.6209 37.9988 27.4595C37.9712 33.1751 33.9452 37.8152 28.8436 37.9996Z" fill="white"/>
+<path d="M19.9736 43.1483C15.8604 46.7053 15.8604 52.5514 19.9736 56.0731C24.6588 60.1231 32.3405 60.1231 37.0257 56.0731C41.1389 52.5162 41.1389 46.6701 37.0257 43.1483C32.3677 39.0983 24.6861 39.0983 19.9736 43.1483Z" fill="white"/>
+</svg>
+      <p class="text-sm text-white mb-1">الوكلاء</p>
+      <p class="text-2xl font-bold text-white">100+</p>
+    </div>
+ 
+
+    <!-- Stat Item 2 -->
+    <div class="flex flex-col items-center gap-3.5">
+<svg width="40" height="50" viewBox="0 0 57 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.2477 8.05292L13.4997 1.37354C6.08262 -2.1949 0 1.43454 0 9.4254V54.6866C0 58.1636 2.94821 61 6.54813 61H29.5752C31.282 61 32.6786 59.6275 32.6786 57.9501V16.5013C32.6786 13.2988 30.2269 9.4864 27.2477 8.05292ZM21.7236 35.8379H10.9549C9.68254 35.8379 8.62739 34.801 8.62739 33.5505C8.62739 32.3 9.68254 31.263 10.9549 31.263H21.7236C22.996 31.263 24.0512 32.3 24.0512 33.5505C24.0512 34.801 23.0271 35.8379 21.7236 35.8379ZM21.7236 23.6382H10.9549C9.68254 23.6382 8.62739 22.6012 8.62739 21.3507C8.62739 20.1002 9.68254 19.0632 10.9549 19.0632H21.7236C22.996 19.0632 24.0512 20.1002 24.0512 21.3507C24.0512 22.6012 23.0271 23.6382 21.7236 23.6382Z" fill="white"/>
+<path d="M61.0004 47.9287V52.748C61.0004 57.3032 57.6454 61.0001 53.5116 61.0001H39.9418C38.3242 61.0001 37.0361 59.5808 37.0361 57.7983V50.6684C40.2414 51.0975 43.6263 50.0743 46.0527 47.9287C48.0897 49.7442 50.6958 50.8335 53.5415 50.8335C56.3274 50.8335 58.9335 49.7442 61.0004 47.9287Z" fill="white"/>
+<path d="M61.0004 40.6953V40.7258C60.7608 44.7239 57.5556 47.9284 53.5415 47.9284C49.3777 47.9284 46.0527 44.4797 46.0527 40.2985C46.0527 44.968 41.829 48.7219 37.0361 47.7758V31.3867C37.0361 29.4335 38.8035 27.9685 40.6907 28.3958L46.0527 29.6166L47.4906 29.9523L53.6014 31.3562C55.0693 31.6614 56.4172 32.1803 57.5855 32.9432C57.5855 32.9738 57.6155 32.9738 57.6155 32.9738C57.915 33.1874 58.2146 33.4316 58.4842 33.7062C59.8621 35.1101 60.7608 37.155 60.9705 40.1459C60.9705 40.329 61.0004 40.5121 61.0004 40.6953Z" fill="white"/>
+</svg>
+      <p class="text-sm text-white mb-1">الشركات التابعة</p>
+      <p  class="text-2xl font-bold text-white">20+</p>
+    </div>
+
+    <!-- Stat Item 3 -->
+   <div class="flex flex-col items-center gap-3.5">
+<svg width="40" height="50" viewBox="0 0 51 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.325 0C7.76888 0 0 7.07006 0 15.7666C0 24.2971 7.33119 31.2012 16.8873 31.4999C17.1791 31.4667 17.4709 31.4667 17.6897 31.4999C17.7626 31.4999 17.7991 31.4999 17.8721 31.4999C17.9085 31.4999 17.9085 31.4999 17.945 31.4999C27.2823 31.2012 34.6134 24.2971 34.6499 15.7666C34.6499 7.07006 26.881 0 17.325 0Z" fill="white"/>
+<path d="M29.8265 38.9272C22.9605 33.2235 11.7633 33.2235 4.84804 38.9272C1.72265 41.5337 0 45.0602 0 48.832C0 52.6039 1.72265 56.0997 4.82343 58.6756C8.26873 61.5581 12.7968 62.9993 17.325 62.9993C21.8531 62.9993 26.3812 61.5581 29.8265 58.6756C32.9273 56.069 34.6499 52.5732 34.6499 48.7707C34.6253 44.9989 32.9273 41.5031 29.8265 38.9272Z" fill="white"/>
+<path d="M50.3657 21.5131C50.7933 24.9182 47.1048 27.902 41.9997 28.3057C41.973 28.3057 41.973 28.3057 41.9462 28.3057H41.8661C41.7057 28.3057 41.5453 28.3057 41.4117 28.3408C38.819 28.4285 36.4402 27.8844 34.6494 26.884C37.4024 25.2692 38.9794 22.847 38.6587 20.2142C38.4716 18.7925 37.7232 17.4937 36.6006 16.3879C37.6163 16.0545 38.7923 15.8438 39.9951 15.7736C45.2338 15.4752 49.9113 18.0378 50.3657 21.5131Z" fill="white"/>
+<path d="M50.3742 48.4595C50.1855 50.9872 48.7227 53.1762 46.2691 54.6616C43.9098 56.0948 40.9371 56.7724 37.988 56.6942C39.6867 55.0003 40.6776 52.8896 40.8663 50.6485C41.1023 47.4171 39.7103 44.3161 36.9263 41.8405C35.3456 40.4594 33.5054 39.3649 31.5 38.557C36.714 36.8893 43.2728 38.0098 47.3072 41.606C49.4777 43.5343 50.5866 45.9578 50.3742 48.4595Z" fill="white"/>
+</svg>
+      <p class="text-sm text-white mb-1">عدد المستخدمين</p>
+      <p class="text-2xl font-bold text-white">70000+</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+    <app-program-modal [isOpen]="showModal" (close)="closeModal()"></app-program-modal>

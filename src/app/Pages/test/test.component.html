@@ -1,0 +1,16 @@
+<div class="py-28 w-[85%] flex flex-col gap-1 mx-auto">
+  <div class="card-preview">
+    <canvas id="cardCanvas" class="mx-auto rounded-2xl" width="600" height="600"></canvas>
+  </div>
+
+  <input type="text"
+         class="bg-gray-100 py-1 px-2 border w-[25%] mx-auto rounded-md"
+         placeholder="اكتب اسمك"
+         [(ngModel)]="userName" />
+  <br />
+  <button 
+    class="w-fit mx-auto bg-[#02527D] cursor-pointer text-white px-5 py-2 rounded-md transition hover:bg-[#033b5a]" 
+    (click)="generateCard()">
+    عرض البطاقه
+  </button>
+</div>

@@ -1,0 +1,17 @@
+<section class="grid grid-cols-12 items-center  text-white pt-20 px-6" [ngStyle]="{ 'background': backgroundGradient }">
+    <!-- Left Section: Gradient Circle Background -->
+    <div class="col-span-6 relative ">
+      <div class="relative z-50 w-[85%] mx-auto">
+        <h1 class="text-4xl font-bold mb-4 border-b w-fit pb-2 tracking-wider">{{ headerText }}</h1>
+        <p class="text-md max-w-lg">{{ description }}</p>
+      </div>
+      <div class="absolute -right-[5%] scale-x-[-1]  -bottom-0 h-full w-[45%] flex items-center justify-start opacity-25 brightness-80 grayscale">
+        <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
+      </div>
+    </div>
+  
+    <!-- Right Section: Image -->
+    <div class="col-span-6">
+      <img [src]="imageSrc" alt="Person" class="w-[95%] mx-auto">
+    </div>
+</section>
