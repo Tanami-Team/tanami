@@ -1,17 +1,27 @@
-<section class="grid grid-cols-12 items-center  text-white pt-20 px-6" [ngStyle]="{ 'background': backgroundGradient }">
-    <!-- Left Section: Gradient Circle Background -->
-    <div class="col-span-6 relative ">
-      <div class="relative z-50 w-[85%] mx-auto">
-        <h1 class="text-4xl font-bold mb-4 border-b w-fit pb-2 tracking-wider">{{ headerText }}</h1>
-        <p class="text-md max-w-lg">{{ description }}</p>
-      </div>
-      <div class="absolute -right-[5%] scale-x-[-1]  -bottom-0 h-full w-[45%] flex items-center justify-start opacity-25 brightness-80 grayscale">
-        <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
-      </div>
+<section class="grid grid-cols-1 md:grid-cols-12 items-center text-white pt-20  md:pt-10 px-4 md:px-6 gap-10"
+         [ngStyle]="{ 'background': backgroundGradient }">
+
+  <!-- Left Section: Text + Background Icons -->
+  <div class="md:col-span-6 relative order-2 md:order-1">
+    <div class="relative z-50 max-w-xl w-full mx-auto text-center md:text-right">
+      <h1  data-aos="fade-up" class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 border-b-2 w-fit pb-2 tracking-wide mx-auto md:mx-0">
+        {{ headerText }}
+      </h1>
+      <p      data-aos="fade-up"
+        data-aos-delay="200" class="text-sm sm:text-base leading-relaxed">
+        {{ description }}
+      </p>
     </div>
-  
-    <!-- Right Section: Image -->
-    <div class="col-span-6">
-      <img [src]="imageSrc" alt="Person" class="w-[95%] mx-auto">
+
+    <!-- Decorative Image (Hidden on small screens) -->
+    <div   class="hidden md:flex absolute -right-[5%] scale-x-[-1] bottom-0 h-full w-[45%]  items-center justify-start opacity-25 brightness-80 grayscale">
+      <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
     </div>
+  </div>
+
+  <!-- Right Section: Image -->
+  <div  data-aos="fade-left" data-aos-delay="300" class="md:col-span-6 order-2 md:order-2">
+    <img [src]="imageSrc" alt="Person" class="w-full  mx-auto" />
+  </div>
+
 </section>

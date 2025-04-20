@@ -1,29 +1,32 @@
-<nav class="bg-black backdrop-blur-md  text-white p-3 fixed top-0 right-0 left-0 z-50 ">
-  <div class="w-[90%] mx-auto flex items-center justify-between ">
-    <div class="flex items-center gap-16">
+<nav class="bg-black backdrop-blur-md text-white p-3 fixed top-0 right-0 left-0 z-50">
+  <div class="w-[90%] mx-auto flex flex-wrap lg:flex-nowrap items-center justify-between">
+    
+    <!-- Logo + Hamburger -->
+    <div class="flex items-center justify-between w-full lg:w-auto">
       <a routerLink="/">
-        <img  src="assets/images/mainLogo.png" alt="Logo" class="h-10 object-cover">
-                
+        <img src="assets/images/mainLogo.png" alt="Logo" class="h-10 object-cover" />
       </a>
-   
+      <button (click)="toggleMenu()" class="lg:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-    <ul class="flex space-x-6 text-[15px]">
-      <li><a  routerLink="/"  class="hover:text-gray-400">الرئيسية</a></li>
+
+    <!-- Navigation Links -->
+    <ul class="flex-col lg:flex-row flex w-full lg:w-auto mt-4 lg:mt-0 space-y-4 lg:space-y-0 lg:space-x-6 text-[15px]"
+        [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'lg:flex': true}">
+
+      <li><a routerLink="/" class="hover:text-gray-400">الرئيسية</a></li>
+
+      <!-- تنامي Dropdown -->
       <li class="relative group">
-        <!-- Add `group` class here to ensure that the dropdown only opens on hover over the button -->
         <button class="hover:text-gray-400 flex gap-2 items-center group">
           تنـامي
-          <!-- SVG when not hovered (default state) -->
-          <svg class="group-hover:hidden" width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 0.434971C11 0.545533 10.9556 0.656095 10.8604 0.74338L6.72372 4.53739C6.05119 5.1542 4.94722 5.1542 4.27469 4.53739L0.137995 0.74338C-0.0459987 0.574628 -0.0459988 0.295315 0.137995 0.126564C0.32199 -0.0421882 0.626532 -0.0421882 0.810526 0.126564L4.94722 3.92057C5.25177 4.19988 5.74665 4.19988 6.05119 3.92057L10.1879 0.126563C10.3719 -0.0421886 10.6764 -0.0421886 10.8604 0.126563C10.9492 0.213849 11 0.32441 11 0.434971Z" fill="currentColor"/>
-          </svg>
-          <!-- SVG when hovered -->
-          <svg class="group-hover:block hidden" width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 4.56503C11 4.45447 10.9556 4.34391 10.8604 4.25662L6.72372 0.462613C6.05119 -0.154204 4.94722 -0.154204 4.27469 0.462613L0.137995 4.25662C-0.0459987 4.42537 -0.0459988 4.70468 0.137995 4.87344C0.32199 5.04219 0.626532 5.04219 0.810526 4.87344L4.94722 1.07943C5.25177 0.800117 5.74665 0.800117 6.05119 1.07943L10.1879 4.87344C10.3719 5.04219 10.6764 5.04219 10.8604 4.87344C10.9492 4.78615 11 4.67559 11 4.56503Z" fill="white"/>
-          </svg>
+          <svg class="group-hover:hidden" width="11" height="5"><path d="M11 0.434971..." /></svg>
+          <svg class="group-hover:block hidden" width="11" height="5"><path d="M11 4.56503..." /></svg>
         </button>
-      
-        <!-- Dropdown menu, will appear only when hovering over the button -->
         <ul class="absolute right-0 bg-black text-white p-2 space-y-2 rounded-md shadow-md w-max opacity-0 transform scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-100">
           <li><a routerLink="/about" class="hover:text-gray-400">عن تنامي</a></li>
           <hr class="text-[#FFFFFF] opacity-65">
@@ -32,48 +35,53 @@
           <li><a routerLink="/Governance" class="hover:text-gray-400">الحوكمة</a></li>
         </ul>
       </li>
-      
+
+      <!-- البرامج Dropdown -->
       <li class="relative group">
         <button class="hover:text-gray-400 flex gap-2 items-center group">
           البرامج
-          <svg class="group-hover:hidden" width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 0.434971C11 0.545533 10.9556 0.656095 10.8604 0.74338L6.72372 4.53739C6.05119 5.1542 4.94722 5.1542 4.27469 4.53739L0.137995 0.74338C-0.0459987 0.574628 -0.0459988 0.295315 0.137995 0.126564C0.32199 -0.0421882 0.626532 -0.0421882 0.810526 0.126564L4.94722 3.92057C5.25177 4.19988 5.74665 4.19988 6.05119 3.92057L10.1879 0.126563C10.3719 -0.0421886 10.6764 -0.0421886 10.8604 0.126563C10.9492 0.213849 11 0.32441 11 0.434971Z" fill="currentColor"/>
-          </svg>
-          <svg class="group-hover:block hidden" width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 4.56503C11 4.45447 10.9556 4.34391 10.8604 4.25662L6.72372 0.462613C6.05119 -0.154204 4.94722 -0.154204 4.27469 0.462613L0.137995 4.25662C-0.0459987 4.42537 -0.0459988 4.70468 0.137995 4.87344C0.32199 5.04219 0.626532 5.04219 0.810526 4.87344L4.94722 1.07943C5.25177 0.800117 5.74665 0.800117 6.05119 1.07943L10.1879 4.87344C10.3719 5.04219 10.6764 5.04219 10.8604 4.87344C10.9492 4.78615 11 4.67559 11 4.56503Z" fill="white"/>
-          </svg>
+          <svg class="group-hover:hidden" width="11" height="5"><path d="M11 0.434971..." /></svg>
+          <svg class="group-hover:block hidden" width="11" height="5"><path d="M11 4.56503..." /></svg>
         </button>
-        
-        <!-- Dropdown menu, will appear only when hovering over the button -->
         <ul class="absolute right-0 bg-black text-white p-2 space-y-2 rounded-md shadow-md w-max opacity-0 transform scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-100">
-          <li><a routerLink="Tanamiinitiative" class="hover:text-gray-400 ">مبادرات تنامي</a></li>
+          <li><a routerLink="Tanamiinitiative" class="hover:text-gray-400">مبادرات تنامي</a></li>
           <hr class="text-[#FFFFFF] opacity-65">
           <li><a routerLink="TanamiTech" class="hover:text-gray-400">تنامي تك</a></li>
         </ul>
       </li>
-      
-      
-       
-         <li><a routerLink="Media_Center" class="hover:text-gray-400">المركز الإعلامي</a></li>
-      <li><a routerLink="Tanami_Version" class="hover:text-gray-400">إصدارات تنامي</a></li>
-      <li><a routerLink="Contact_us"  class="hover:text-gray-400">اتصل بنا</a></li>
-    </ul>
-    <div class="flex items-center space-x-4 text-[15px]">
-      <div class="bg-[#e6e4e4] w-[1px] h-8">
 
-      </div>
-      <a href="#" class="text-sm flex items-center gap-1.5">
-         English
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <li><a routerLink="Media_Center" class="hover:text-gray-400">المركز الإعلامي</a></li>
+      <li><a routerLink="Tanami_Version" class="hover:text-gray-400">إصدارات تنامي</a></li>
+      <li><a routerLink="Contact_us" class="hover:text-gray-400">اتصل بنا</a></li>
+
+      <!-- English + Login for mobile only -->
+      <li class="lg:hidden flex flex-col gap-2 border-t border-gray-600 pt-2">
+        <a href="#" class="text-sm flex items-center gap-1.5">
+          English
+ <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7.03827 12.9235C10.3308 12.9235 13 10.2543 13 6.96174C13 3.66916 10.3308 1 7.03827 1C3.7457 1 1.07654 3.66916 1.07654 6.96174C1.07654 10.2543 3.7457 12.9235 7.03827 12.9235Z" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M1.07654 6.9613H13" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M7.03883 1C8.53003 2.63253 9.37748 4.75114 9.42353 6.96174C9.37748 9.17233 8.53003 11.2909 7.03883 12.9235C5.54764 11.2909 4.70019 9.17233 4.65414 6.96174C4.70019 4.75114 5.54764 2.63253 7.03883 1Z" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M11.1057 10.8159C9.99374 9.65537 8.59017 9.03036 7.15604 9.05715C5.72524 9.15853 4.38309 9.90638 3.37925 11.1616" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M11.1057 2.63477C9.99374 3.79531 8.59017 4.42032 7.15604 4.39354C5.72524 4.29215 4.38309 3.5443 3.37925 2.2891" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          
-      </a>
-      <a routerLink="/Auth" class="bg-teal-500 text-white px-3 py-1.5 rounded ">تسجيل الدخول</a>
+          </svg>          </a>
+        <a routerLink="/Auth" class="bg-teal-500 text-white px-3 py-1.5 rounded text-center">تسجيل الدخول</a>
+      </li>
+    </ul>
+
+    <!-- English + Login for desktop only -->
+    <div class="hidden lg:flex items-center gap-4 text-[15px]">
+      <div class="bg-[#e6e4e4] w-[1px] h-8"></div>
+      <a href="#" class="text-sm flex items-center gap-1.5">
+        English
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.03827 12.9235C10.3308 12.9235 13 10.2543 13 6.96174C13 3.66916 10.3308 1 7.03827 1C3.7457 1 1.07654 3.66916 1.07654 6.96174C1.07654 10.2543 3.7457 12.9235 7.03827 12.9235Z" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1.07654 6.9613H13" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.03883 1C8.53003 2.63253 9.37748 4.75114 9.42353 6.96174C9.37748 9.17233 8.53003 11.2909 7.03883 12.9235C5.54764 11.2909 4.70019 9.17233 4.65414 6.96174C4.70019 4.75114 5.54764 2.63253 7.03883 1Z" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.1057 10.8159C9.99374 9.65537 8.59017 9.03036 7.15604 9.05715C5.72524 9.15853 4.38309 9.90638 3.37925 11.1616" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.1057 2.63477C9.99374 3.79531 8.59017 4.42032 7.15604 4.39354C5.72524 4.29215 4.38309 3.5443 3.37925 2.2891" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>      </a>
+      <a routerLink="/Auth" class="bg-teal-500 text-white px-3 py-1.5 rounded">تسجيل الدخول</a>
     </div>
   </div>
 </nav>

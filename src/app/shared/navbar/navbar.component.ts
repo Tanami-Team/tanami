@@ -4,11 +4,15 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink,CommonModule],
+  standalone: true,
+  imports: [CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  isMenuOpen = false;
 
-
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

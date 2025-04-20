@@ -1,6 +1,6 @@
-<div class="grid grid-cols-12 items-center justify-between bg-gradient-to-br from-white to-[#EAF7FA] p-20 py-24 rounded-md">
+<div class="overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center justify-between bg-gradient-to-br from-white to-[#EAF7FA] px-5 py-20 rounded-md gap-8 relative">
   <!-- Left Text Section -->
-  <div class="relative col-span-5 flex flex-col items-start gap-8 justify-center">
+  <div data-aos="fade-left" data-aos-duration="1000" class="relative col-span-12 lg:col-span-5 mx-auto lg:mx-0 lg:w-full  flex flex-col items-start gap-6  justify-center">
 
   <!-- Layer Blur Background -->
   <div class="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-lg -z-10">
@@ -24,7 +24,7 @@
 
   <!-- Logo -->
   <div>
-    <img src="assets/images/muhkm.png" alt="muhkam logo" class="w-full h-24 object-cover" />
+    <img src="assets/images/muhkm.png" alt="muhkam logo" class="w-full h-20 object-contain" />
   </div>
 
      <button (click)="openModal()" class="cursor-pointer flex items-center gap-2 bg-[#FFD156] hover:bg-yellow-500 text-[#02527D] font-bold py-2 px-4 rounded">
@@ -41,11 +41,11 @@
 
 
   <!-- Right Image + Button Section -->
-  <div class="col-span-7 text-right flex flex-col gap-2">
+  <div data-aos="fade-right" data-aos-duration="1000" class="col-span-7  flex flex-col  gap-2">
     <app-section-title   secondaryText=" برنامج محكم" [showRightDecoration]="true" [mainheader]="true"></app-section-title>
-    <div class="flex flex-col pt-2.5 gap-2">
+    <div class="flex flex-col pt-2.5 gap-2   ">
     <h3 class="text-[#02527D] text-lg font-semibold ">تأسيس وحدات الحوكمة في الجمعيات الأهلية</h3>
-    <p class="text-[#383838] leading-loose text-[15px] ">
+    <p class="text-[#383838] leading-loose text-[15px] mx-auto ">
       تأسيس وحدات الحوكمة وتطوير منظومتها في الجمعيات الأهلية عبر بناء هياكلها المؤسسية
       وحوكمة أعمالها ونقل المعرفة لأدوات الحوكمة والممكنين بالجملة، بانطلاق الجمعية
       لمعايير الحوكمة المعتمدة والمعمول بها، مع التأكيد والالتزام بتطبيق متطلباتها.
@@ -64,7 +64,7 @@
 
 
 
-<div class="relative w-[85%] py-20 mx-auto ">
+<div data-aos="zoom-in-up" data-aos-duration="1000" class="relative w-[85%] py-20 mx-auto ">
 <owl-carousel-o [options]="customOptions">
   <ng-template carouselSlide *ngFor="let product of slides">
     <div class="slide-content" [id]="'product-' + product.id">
@@ -73,28 +73,6 @@
   </ng-template>
 </owl-carousel-o>
 
-
-<!-- 
-    <p-carousel dir="rtl" 
-        [value]="myProducts" 
-        [numVisible]="1" 
-        [numScroll]="1" 
-        [circular]="false"  
-        [autoplayInterval]="4000" 
-        [showNavigators]="false"
-        [showIndicators]="true"
-
-        >
-
-      <ng-template let-product pTemplate="item">
-        <div class="relative p-2 px-4 m-2 my-5 flex items-center justify-center">
-          
-      
-              <img [src]="product.image" [alt]="product.name" class=" w-[55%] h-96 object-contain mx-auto rounded-lg" />
-
-        </div>
-      </ng-template>
-    </p-carousel> -->
 
 <div class="w-[95%] mx-auto grid grid-cols-12 py-10 text-right">
     <div class="flex items-center justify-start  gap-10  col-span-3">
@@ -118,7 +96,7 @@
 </div>
 
 
-<div class="relative pt-56 w-full bg-white">
+<div data-aos="zoom-in-up" class="relative pt-56 w-full bg-white">
   <!-- Blue background block behind -->
   <div class="bg-[#02527D] h-[30vh] w-full"></div>
 
@@ -132,22 +110,25 @@
 
 <div class="py-10">
 
-       <app-section-title mainText="الأنشطه"  secondaryText="الرئيسية" [showRightDecoration]="true" marignAuto="mx-auto" [mainheader]="true"></app-section-title>
+  <div  data-aos="zoom-in-up" data-aos-delay="100">
+
+    <app-section-title mainText="الأنشطه"  secondaryText="الرئيسية" [showRightDecoration]="true" marignAuto="mx-auto" [mainheader]="true"></app-section-title>
+  </div>
  
- <div class="grid grid-cols-2 gap-9 gap-x-14 w-[60%] mx-auto">
-<div>
+ <div  class="grid grid-cols-2 gap-9 gap-x-14 w-[60%] mx-auto">
+<div  data-aos="zoom-in-up" data-aos-delay="100">
        <button class=" flex items-center justify-center gap-2 border border-[#02527D] text-sm text-[#1A1A1A] px-6 py-4 rounded-tl-[60px] rounded-br-[60px] rounded-tr-md rounded-bl-md">
            <img src="assets/images/gif1.gif" alt="click icon" class="w-[20%]" />
   <span class="font-semibold ">اختيار وانتقاء الجمعيات</span>
 </button>
 </div>
-<div>
+<div  data-aos="zoom-in-up" data-aos-delay="200">
        <button class=" flex items-center justify-center gap-2 border border-[#02527D] text-sm text-[#1A1A1A] px-6 py-4 rounded-tl-[60px] rounded-br-[60px] rounded-tr-md rounded-bl-md">
            <img src="assets/images/gif1.gif" alt="click icon" class="w-[20%]" />
   <span class="font-semibold ">اختيار وانتقاء الجمعيات</span>
 </button>
 </div>
-<div>
+<div  data-aos="zoom-in-up" data-aos-delay="300">
        <button class=" flex items-center justify-center gap-2 border border-[#02527D] text-sm text-[#1A1A1A] px-6 py-4 rounded-tl-[60px] rounded-br-[60px] rounded-tr-md rounded-bl-md">
            <img src="assets/images/gif1.gif" alt="click icon" class="w-[20%]" />
   <span class="font-semibold ">اختيار وانتقاء الجمعيات</span>
@@ -172,7 +153,9 @@
       <!-- Cards Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-      <div *ngFor="let doc of documents" 
+      <div   *ngFor="let doc of documents; let i = index" 
+  [attr.data-aos]="'fade-up'" 
+  [attr.data-aos-delay]="i * 100"
           class="bg-white hover:bg-[#FFD156] cursor-pointer w-full py-5 px-2 rounded-lg shadow-md flex flex-col gap-2.5 justify-between group transition-transform duration-300 ease-in-out transform hover:scale-105">
           
           <div class="flex gap-2.5 items-center">
@@ -222,10 +205,13 @@
   <div class="absolute inset-0 bg-[#02527D]/70"></div>
 
   <!-- Stats Content -->
-  <div class="relative z-10 w-[85%] mx-auto flex justify-evenly   gap-10 text-center">
+  <div   class="flex flex-col items-center gap-3.5" 
+  data-aos="zoom-in" 
+  data-aos-delay="100" 
+  data-aos-duration="800" class="relative z-10 w-[85%] mx-auto flex justify-evenly   gap-10 text-center">
     
     <!-- Stat Item 1 -->
-         <div class="flex flex-col items-center gap-3.5 ">
+         <div data-aos="zoom-in" data-aos-delay="0" data-aos-duration="800" class="flex flex-col items-center gap-3.5 ">
 
 <svg width="40" height="50" viewBox="0 0 57 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M44.6252 16.8887C44.4207 16.8594 44.2161 16.8594 44.0116 16.8887C39.4826 16.7424 35.8887 13.0251 35.8887 8.45899C35.8887 3.80508 39.658 0 44.333 0C48.9789 0 52.7774 3.77581 52.7774 8.45899C52.7482 13.0251 49.1542 16.7424 44.6252 16.8887Z" fill="white"/>
@@ -241,7 +227,7 @@
  
 
     <!-- Stat Item 2 -->
-    <div class="flex flex-col items-center gap-3.5">
+    <div  data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800" class="flex flex-col items-center gap-3.5">
 <svg width="40" height="50" viewBox="0 0 57 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M27.2477 8.05292L13.4997 1.37354C6.08262 -2.1949 0 1.43454 0 9.4254V54.6866C0 58.1636 2.94821 61 6.54813 61H29.5752C31.282 61 32.6786 59.6275 32.6786 57.9501V16.5013C32.6786 13.2988 30.2269 9.4864 27.2477 8.05292ZM21.7236 35.8379H10.9549C9.68254 35.8379 8.62739 34.801 8.62739 33.5505C8.62739 32.3 9.68254 31.263 10.9549 31.263H21.7236C22.996 31.263 24.0512 32.3 24.0512 33.5505C24.0512 34.801 23.0271 35.8379 21.7236 35.8379ZM21.7236 23.6382H10.9549C9.68254 23.6382 8.62739 22.6012 8.62739 21.3507C8.62739 20.1002 9.68254 19.0632 10.9549 19.0632H21.7236C22.996 19.0632 24.0512 20.1002 24.0512 21.3507C24.0512 22.6012 23.0271 23.6382 21.7236 23.6382Z" fill="white"/>
 <path d="M61.0004 47.9287V52.748C61.0004 57.3032 57.6454 61.0001 53.5116 61.0001H39.9418C38.3242 61.0001 37.0361 59.5808 37.0361 57.7983V50.6684C40.2414 51.0975 43.6263 50.0743 46.0527 47.9287C48.0897 49.7442 50.6958 50.8335 53.5415 50.8335C56.3274 50.8335 58.9335 49.7442 61.0004 47.9287Z" fill="white"/>
@@ -252,7 +238,7 @@
     </div>
 
     <!-- Stat Item 3 -->
-   <div class="flex flex-col items-center gap-3.5">
+   <div  data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" class="flex flex-col items-center gap-3.5">
 <svg width="40" height="50" viewBox="0 0 51 63" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.325 0C7.76888 0 0 7.07006 0 15.7666C0 24.2971 7.33119 31.2012 16.8873 31.4999C17.1791 31.4667 17.4709 31.4667 17.6897 31.4999C17.7626 31.4999 17.7991 31.4999 17.8721 31.4999C17.9085 31.4999 17.9085 31.4999 17.945 31.4999C27.2823 31.2012 34.6134 24.2971 34.6499 15.7666C34.6499 7.07006 26.881 0 17.325 0Z" fill="white"/>
 <path d="M29.8265 38.9272C22.9605 33.2235 11.7633 33.2235 4.84804 38.9272C1.72265 41.5337 0 45.0602 0 48.832C0 52.6039 1.72265 56.0997 4.82343 58.6756C8.26873 61.5581 12.7968 62.9993 17.325 62.9993C21.8531 62.9993 26.3812 61.5581 29.8265 58.6756C32.9273 56.069 34.6499 52.5732 34.6499 48.7707C34.6253 44.9989 32.9273 41.5031 29.8265 38.9272Z" fill="white"/>

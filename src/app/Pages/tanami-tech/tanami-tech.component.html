@@ -1,26 +1,28 @@
 
-<div class="bg-gradient-to-r  from-[#00649A] to-[#02527D] py-30 relative text-white">
-    <!-- <div class="absolute -bottom-40 -right-12 h-full w-[25%] flex items-center overflow-hidden justify-start z-10 opacity-30 grayscale">
-        <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
-      </div> -->
-    <div class="container mx-auto grid  grid-cols-12 items-center justify-between gap-8 px-4">
+<div class="bg-gradient-to-r from-[#00649A] to-[#02527D] py-20 relative text-white">
+
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 items-center gap-10 px-4">
       
 
  <!-- Right: Text -->
- <div class=" col-span-6  text-center lg:text-right w-[80%] mx-auto space-y-6">
-    <h2 class="text-4xl font-bold border-b pb-2 inline-block">تنامي تك</h2>
+<div class="col-span-6 text-center lg:text-right w-[100%] mx-auto space-y-6"
+     data-aos="fade-left"
+     data-aos-delay="100"
+     data-aos-duration="800">    <h2 class="text-4xl font-bold border-b pb-2 inline-block">تنامي تك</h2>
     <h3 class="text-2xl font-semibold text-white">صمم وطور 
         <span class="font-medium">
             أفكارك
         </span>
     </h3>
-    <p class="text-sm w-[75%] me-auto leading-relaxed">
+      <p class="text-sm md:text-base leading-relaxed w-full lg:w-[80%] mx-auto lg:mx-0">
       تساهم مبادرة المهارات في تمكين الشباب من اكتشاف اهتماماتهم، تطوير مهاراتهم، رفع قدراتهم، وتخطيط مستقبلهم الوظيفي.
     </p>
 
     <!-- Stats -->
-    <div class="bg-[#024e71] text-white rounded-md flex  justify-center lg:justify-start divide-x divide-[#00649A] overflow-hidden text-sm font-medium w-full mx-auto lg:mx-0">
-  
+<div class="bg-[#024e71] text-white rounded-md flex flex-col sm:flex-row justify-between divide-y sm:divide-y-0 sm:divide-x divide-[#00649A] text-sm font-medium w-full max-w-xl mx-auto lg:mx-0"
+     data-aos="fade-up"
+     data-aos-delay="200"
+     data-aos-duration="800">  
         <div class="flex items-center text-sm gap-2 px-4 py-2">
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 4.53726V6.67333C10 6.83341 9.745 6.90344 9.635 6.78838C9.4 6.54326 9.105 6.35817 8.765 6.25312C7.98 6.008 7.075 6.24812 6.505 6.83841C6.145 7.2236 5.95 7.70384 5.94 8.2241C5.94 8.31415 5.895 8.39418 5.825 8.44921C5.465 8.73435 5.245 9.17958 5.245 9.68983V9.69483C5.245 9.85491 5.13 9.99998 4.97 9.99998H2.67C1.2 10.005 0 8.80439 0 7.32865V2.2111C0 0.990494 0.99 0 2.21 0H3.37C4.185 0 4.44 0.265132 4.765 0.700349L5.465 1.63081C5.62 1.83592 5.64 1.86093 5.93 1.86093H7.325C8.515 1.86093 9.525 2.64132 9.87 3.72186C9.945 3.94697 9.985 4.17708 9.995 4.4222C10 4.45722 10 4.50224 10 4.53726Z" fill="white"/>
@@ -68,7 +70,7 @@
       
     <!-- CTA -->
     <div>
-      <button (click)="openModal()" class="flex items-center gap-2 bg-[#FFD156] hover:bg-yellow-500 text-[#02527D] font-bold py-2 px-4 rounded">
+        <button data-aos="zoom-in" data-aos-delay="300"  (click)="openModal()" class="flex items-center gap-2 mx-auto lg:mx-0 bg-[#FFD156] hover:bg-yellow-500 text-[#02527D] font-bold py-2 px-5 rounded transition">
     
             
         اشترك الآن
@@ -81,7 +83,10 @@
 
 
       <!-- Left: Image -->
-      <div class="col-span-6">
+      <div  class="col-span-6"
+     data-aos="fade-right"
+     data-aos-delay="100"
+     data-aos-duration="800"> class="col-span-6">
         <img src="/assets/images/mack.png" alt="tanami screen" class="rounded-xl  w-[80%] mx-auto " />
       </div>
   
@@ -89,12 +94,8 @@
     </div>
   </div>
   <app-program-modal [isOpen]="showModal" (close)="closeModal()"></app-program-modal>
-
-
-<div class="py-10 w-[85%] mx-auto">
-
-    <app-porgram-card [version]="true"></app-porgram-card>
-
-  </div>
+<div class="py-10 w-[90%] mx-auto" data-aos="fade-up" data-aos-delay="150">
+  <app-porgram-card [version]="true"></app-porgram-card>
+</div>
 
   

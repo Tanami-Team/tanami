@@ -1,20 +1,25 @@
 <app-header-tanami description="تساهم مسك المهارات في تمكين الشباب من اكتشاف اهتماماتهم, تطوير مهاراتهم, صقل قدراتهم, وتخطيط مستقبلهم الوظيفي"  headerText="أعضاء مجلس الإدارة" imageSrc="assets/images/header2.png" backgroundGradient="radial-gradient(circle at 15% 50%, #FFD156 15%, #DFA509 50%)"></app-header-tanami>
 <app-about-header></app-about-header>
- <div class="flex flex-col justify-center items-center py-10">
-    <app-section-title  mainText="اعضاء" secondaryText=" مجلس الادارة " [showRightDecoration]="true" [mainheader]="true"></app-section-title>
-        <div class="bg-[#FFD156] text-[#02527D] py-2 px-6 rounded-md text-xl font-semibold flex items-center gap-2">
-          <span>لجمعية تنامي</span>
-          <span class="text-sm">2024 - 2020</span>
-        </div>
-      
+<div class="flex flex-col justify-center items-center py-10"
+     data-aos="fade-up" data-aos-offset="100">
 
-      
+  <app-section-title 
+    mainText="اعضاء" 
+    secondaryText=" مجلس الادارة " 
+    [showRightDecoration]="true" 
+    [mainheader]="true">
+  </app-section-title>
+
+  <div class="bg-[#FFD156] text-[#02527D] py-2 px-6 rounded-md text-xl font-semibold flex items-center gap-2"
+       data-aos="zoom-in" data-aos-delay="200">
+    <span>لجمعية تنامي</span>
+    <span class="text-sm">2024 - 2020</span>
+  </div>
+
+</div>
 
 
-        
- </div>
-
-
- <app-team-card></app-team-card>
-
+<div data-aos="fade-up" data-aos-delay="400">
+  <app-team-card></app-team-card>
+</div>
 

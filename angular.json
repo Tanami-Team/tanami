@@ -16,28 +16,29 @@
             "outputPath": "dist/tanami",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-          "assets": [
-  {
-    "glob": "**/*",
-    "input": "public",
-    "output": "/public"
-  },
-  {
-    "glob": "**/*",
-    "input": "src/assets/images",
-    "output": "/assets/images"
-  }
-],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "/public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/images",
+                "output": "/assets/images"
+              }
+            ],
             "styles": [
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/aos/dist/aos.css",
+
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/aos/dist/aos.js"]
           },
           "configurations": {
             "production": {

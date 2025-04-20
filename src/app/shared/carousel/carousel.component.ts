@@ -20,4 +20,26 @@ export class CarouselComponent {
     this.currentSlide = index;
   }
 
+  responsiveOptions = [
+    {
+      breakpoint: '1400px',
+      numVisible: 5,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 2,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '480px',
+      numVisible: 1.5,
+      numScroll: 1,
+    },
+  ];
 }

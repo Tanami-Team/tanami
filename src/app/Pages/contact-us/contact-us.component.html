@@ -1,19 +1,20 @@
-<div class="container mx-auto pb-20 pt-24 w-[90%]   px-6  items-center ">
-    <div class="grid grid-cols-12 gap-16 h-screen  ">
+<div class="container mx-auto pb-20 pt-24 w-[90%] px-4 items-center">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
-  
-    <div class="col-span-8 flex flex-1 flex-col">
-      <div class=" border-b-[2px]">
-        <app-section-title  secondaryText="أتصل بنا" [showRightDecoration]="false" [mainheader]="false"></app-section-title>
-        <p class="text-right pb-3 text-[#383838] ">كتابة المزيد من المحتوي للوصول الي المعلومة المطلوبة </p>
-        
+    <!-- Left Content -->
+    <div class="lg:col-span-8 flex flex-col" data-aos="fade-up" data-aos-duration="1000">
+      <div class="border-b-2" data-aos="fade-right" data-aos-delay="100">
+        <app-section-title secondaryText="أتصل بنا" [showRightDecoration]="false" [mainheader]="false"></app-section-title>
+        <p class="text-right pb-3 text-[#383838]">كتابة المزيد من المحتوي للوصول الي المعلومة المطلوبة</p>
       </div>
-      <div class=" flex justify-between py-5 items-center">
-        <button class="bg-gradient-to-r from-[#02527D] to-[#0576B2] text-white py-1 px-6 rounded-md text-xl hover:from-[#022F47] hover:to-[#02527D]">
-          تابعونا على   
-             </button>
-        
-                <div class="flex justify-center items-center  space-x-6">
+
+      <!-- Socials -->
+      <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row justify-between gap-4 py-5 items-center">
+        <button class="bg-gradient-to-r from-[#02527D] to-[#0576B2] text-white py-2 px-6 rounded-md text-lg hover:from-[#022F47] hover:to-[#02527D]">
+          تابعونا على
+        </button>
+
+          <div class="flex justify-center items-center  space-x-6">
           <a href="#" class="text-blue-600"><svg width="20" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.3732 0.000160803H1.62676C1.41603 -0.00288047 1.20679 0.0372449 1.01099 0.118245C0.815184 0.199246 0.636653 0.319535 0.485591 0.472243C0.334528 0.624951 0.213893 0.807086 0.130575 1.00825C0.0472562 1.20941 0.00288655 1.42566 0 1.64464V21.3554C0.00288655 21.5743 0.0472562 21.7906 0.130575 21.9918C0.213893 22.1929 0.334528 22.375 0.485591 22.5278C0.636653 22.6805 0.815184 22.8008 1.01099 22.8818C1.20679 22.9628 1.41603 23.0029 1.62676 22.9998H20.3732C20.584 23.0029 20.7932 22.9628 20.989 22.8818C21.1848 22.8008 21.3633 22.6805 21.5144 22.5278C21.6655 22.375 21.7861 22.1929 21.8694 21.9918C21.9527 21.7906 21.9971 21.5743 22 21.3554V1.64464C21.9971 1.42566 21.9527 1.20941 21.8694 1.00825C21.7861 0.807086 21.6655 0.624951 21.5144 0.472243C21.3633 0.319535 21.1848 0.199246 20.989 0.118245C20.7932 0.0372449 20.584 -0.00288047 20.3732 0.000160803ZM6.67304 19.2509H3.35312V8.90104H6.67304V19.2509ZM5.01308 7.45206C4.78637 7.45206 4.56188 7.40565 4.35243 7.3155C4.14298 7.22534 3.95267 7.0932 3.79236 6.92661C3.63205 6.76003 3.50489 6.56226 3.41813 6.34461C3.33137 6.12695 3.28672 5.89367 3.28672 5.65808C3.28672 5.42249 3.33137 5.18921 3.41813 4.97156C3.50489 4.7539 3.63205 4.55614 3.79236 4.38955C3.95267 4.22296 4.14298 4.09082 4.35243 4.00066C4.56188 3.91051 4.78637 3.86411 5.01308 3.86411C5.2562 3.83545 5.50241 3.86049 5.73558 3.93757C5.96874 4.01465 6.18361 4.14205 6.36612 4.31141C6.54862 4.48077 6.69465 4.68828 6.79463 4.92035C6.89461 5.15242 6.94629 5.40382 6.94629 5.65808C6.94629 5.91235 6.89461 6.16375 6.79463 6.39582C6.69465 6.62789 6.54862 6.8354 6.36612 7.00476C6.18361 7.17412 5.96874 7.30151 5.73558 7.37859C5.50241 7.45567 5.2562 7.48071 5.01308 7.45206ZM18.6469 19.2509H15.327V13.6965C15.327 12.305 14.8511 11.3965 13.6449 11.3965C13.2716 11.3993 12.9081 11.521 12.6033 11.7451C12.2986 11.9693 12.0673 12.2851 11.9406 12.65C11.854 12.9203 11.8165 13.2049 11.83 13.4895V19.2394H8.51006C8.51006 19.2394 8.51006 9.83252 8.51006 8.88954H11.83V10.35C12.1316 9.8062 12.5702 9.35818 13.0987 9.05422C13.6271 8.75026 14.2254 8.60187 14.829 8.62504C17.0423 8.62504 18.6469 10.1085 18.6469 13.294V19.2509Z" fill="#02527D"/>
             </svg>
@@ -33,107 +34,88 @@
         </div>
       </div>
 
-      <div class="pb-7  border-b-[2px] grid grid-cols-9 gap-4">
-        <div class="col-span-3 bg-gradient-to-r from-[#F9FAFB] to-[#F3F4F6] relative p-5 py-12 border border-[#02527D] rounded-xl  text-center">
-          <div class="flex justify-center mb-4 rounded-md border w-fit mx-auto p-2 border-[#02527D]">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Contact Cards -->
+      <div data-aos="zoom-in-up" data-aos-delay="300" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 border-b-2 pb-10">
+        <div class="bg-gradient-to-r from-[#F9FAFB] to-[#F3F4F6] relative p-5 py-12 border border-[#02527D] rounded-xl text-center">
+          <div class="flex justify-center mb-4 border border-[#02527D] w-fit mx-auto p-2 rounded-md">
+               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5101 12.6308V14.9906C16.511 15.2097 16.466 15.4266 16.3781 15.6273C16.2902 15.828 16.1612 16.0082 15.9994 16.1563C15.8377 16.3044 15.6467 16.4171 15.4388 16.4873C15.2309 16.5575 15.0105 16.5836 14.7919 16.5639C12.3666 16.3008 10.0369 15.4737 7.99003 14.149C6.08569 12.9413 4.47113 11.3299 3.26103 9.42934C1.92901 7.37725 1.10007 5.04086 0.841358 2.60947C0.821662 2.39195 0.847565 2.17271 0.917417 1.96573C0.987268 1.75875 1.09954 1.56855 1.24708 1.40724C1.39462 1.24593 1.5742 1.11705 1.77438 1.0288C1.97457 0.940555 2.19097 0.894874 2.40981 0.894669H4.77431C5.15681 0.890911 5.52764 1.02609 5.81766 1.27502C6.10768 1.52394 6.29711 1.86962 6.35065 2.24763C6.45045 3.00282 6.63553 3.74433 6.90236 4.45799C7.00841 4.73954 7.03136 5.04552 6.9685 5.33968C6.90564 5.63385 6.7596 5.90386 6.54769 6.11773L5.54672 7.11672C6.66872 9.08602 8.30251 10.7166 10.2757 11.8364L11.2767 10.8374C11.491 10.6259 11.7615 10.4801 12.0563 10.4174C12.351 10.3547 12.6576 10.3776 12.9397 10.4834C13.6548 10.7497 14.3978 10.9344 15.1545 11.034C15.5373 11.0879 15.887 11.2804 16.1369 11.5748C16.3869 11.8692 16.5197 12.2451 16.5101 12.6308Z" stroke="#02527D" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>            
+              </svg> 
           </div>
           <h3 class="text-lg font-semibold text-[#02527D]">اتصل بنا</h3>
-          <p class="text-[10px] text-[#02527D] tracking-wider mt-2">اتصل بنا في أي وقت خلال 24 ساعة</p>
-          <button dir="ltr" class="bg-[#02527D] absolute -bottom-3 translate-x-[50%] text-sm text-white px-4 py-1 rounded-md mt-4">(05)52213324</button>
+          <p class="text-[10px] text-[#02527D] mt-2">اتصل بنا في أي وقت خلال 24 ساعة</p>
+          <button class="bg-[#02527D] text-white px-4 py-1 rounded-md text-sm mt-4 absolute -bottom-3 left-1/2 transform -translate-x-1/2">(05)52213324</button>
         </div>
-        <div class="col-span-3 bg-gradient-to-r from-[#F9FAFB] to-[#F3F4F6] relative p-5 py-12 border border-[#02527D] rounded-xl  text-center">
-          <div class="flex justify-center mb-4 rounded-md border w-fit mx-auto p-2 border-[#02527D]">
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <div class="bg-gradient-to-r from-[#F9FAFB] to-[#F3F4F6] relative p-5 py-12 border border-[#02527D] rounded-xl text-center">
+          <div class="flex justify-center mb-4 border border-[#02527D] w-fit mx-auto p-2 rounded-md">
+               <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.40289 1.21265H16.5791C17.5537 1.21265 18.3512 2.01773 18.3512 3.00171V13.7361C18.3512 14.7201 17.5537 15.5252 16.5791 15.5252H2.40289C1.42827 15.5252 0.630859 14.7201 0.630859 13.7361V3.00171C0.630859 2.01773 1.42827 1.21265 2.40289 1.21265Z" stroke="#02527D" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M18.3512 3.25726L9.49101 9.39121L0.630859 3.25726" stroke="#02527D" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-                       
           </div>
-          <h3 class="text-lg font-semibold text-[#02527D]">راسلنا عبر </h3>
-          <p class="text-[10px] text-[#02527D] tracking-wider mt-2">في استقبال طلباتك</p>
-          <button dir="ltr" class="bg-[#02527D] absolute -bottom-3 translate-x-[50%] w-fit text-white px-4 py-1 rounded-md text-sm mt-4">INFO &#64;STEER.SA</button>
+          <h3 class="text-lg font-semibold text-[#02527D]">راسلنا عبر</h3>
+          <p class="text-[10px] text-[#02527D] mt-2">في استقبال طلباتك</p>
+          <button class="bg-[#02527D] text-white px-4 py-1 rounded-md text-sm mt-4 absolute -bottom-3 left-1/2 transform -translate-x-1/2">INFO&#64;STEER.SA</button>
         </div>
 
-     
-      <div class=" col-span-3 bg-gradient-to-r from-[#F9FAFB] to-[#F3F4F6] relative p-6 py-10 border border-[#02527D] rounded-xl  text-center">
-        <div class="flex justify-center mb-4 rounded-md border w-fit mx-auto p-2 border-[#02527D]">
-          <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="bg-gradient-to-r from-[#F9FAFB] to-[#F3F4F6] relative p-6 py-10 border border-[#02527D] rounded-xl text-center">
+          <div class="flex justify-center mb-4 border border-[#02527D] w-fit mx-auto p-2 rounded-md">
+                <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.841066 6.14902L0.841176 6.1485C1.63259 2.38386 4.6583 0.713013 7.30235 0.713013H7.30236H7.30236H7.30236H7.30237H7.30237H7.30238H7.30238H7.30239H7.30239H7.30239H7.3024H7.3024H7.30241H7.30241H7.30242H7.30242H7.30242H7.30243H7.30243H7.30244H7.30244H7.30245H7.30245H7.30246H7.30246H7.30247H7.30247H7.30248H7.30248H7.30249H7.3025H7.3025H7.30251H7.30252H7.30252H7.30253H7.30253H7.30253H7.30254H7.30255H7.30255H7.30255H7.30256H7.30256H7.30257H7.30257H7.30257H7.30258H7.30258H7.30259H7.30259H7.3026H7.3026H7.3026H7.30261H7.30261H7.30262H7.30262H7.30263H7.30263H7.30264H7.30264H7.30265H7.30265H7.30266H7.30266H7.30267H7.30267H7.30268H7.30268H7.30269H7.3027H7.3027H7.30271H7.30271H7.30272H7.30273H7.30273H7.30274H7.30274H7.30275H7.30276H7.30276H7.30277H7.30277H7.30278H7.30279H7.30279H7.3028H7.30281H7.30281H7.30282H7.30283H7.30284H7.30284H7.30285H7.30286H7.30287H7.30287H7.30288H7.30289H7.3029H7.3029H7.30291H7.30292H7.30293H7.30293H7.30294H7.30295H7.30296H7.30297H7.30298H7.30298H7.30299H7.303H7.30301H7.30302H7.30303H7.30304H7.30304H7.30305H7.30306H7.30307H7.30308H7.30309H7.3031H7.30311H7.30312H7.30313H7.30314H7.30315H7.30316H7.30317H7.30318H7.30319H7.3032H7.30321H7.30322H7.30323H7.30324H7.30325H7.30326H7.30327H7.30328H7.3033H7.30331H7.30332H7.30333H7.30334H7.30335H7.30336H7.30338H7.30339H7.3034H7.30341H7.30342H7.30344H7.30345H7.30346H7.30347H7.30348H7.3035H7.30351H7.30352H7.30354H7.30355H7.30356H7.30357H7.30359H7.3036H7.30361H7.30363H7.30364H7.30366H7.30367H7.30368H7.3037H7.30371H7.30373H7.30374H7.30375H7.30377H7.30378H7.3038H7.30381H7.30383H7.30384H7.30386H7.30387H7.30389H7.3039H7.30392H7.30393H7.30395H7.30397H7.30398H7.304H7.30401H7.30403H7.30405H7.30406H7.30408H7.3041H7.30411H7.30413H7.30415H7.30416H7.30418H7.3042H7.30422H7.30423H7.30425H7.30427H7.30429H7.3043H7.30432H7.30434H7.30436H7.30438H7.3044H7.30441H7.30443H7.30445H7.30447H7.30449H7.30451H7.30453H7.30455H7.30457H7.30459H7.30461H7.30463H7.30465H7.30467H7.30469H7.30471H7.30473H7.30475H7.30477H7.30479H7.30481H7.30483H7.30485H7.30487H7.3049H7.30492H7.30494H7.30496H7.30498H7.30501H7.30503H7.30505H7.30507H7.30509H7.30512H7.30514H7.30516H7.30519H7.30521H7.30523H7.30526H7.30528H7.3053H7.30533H7.30535H7.30538H7.3054H7.30542H7.30545H7.30547H7.3055H7.30552H7.30555H7.30557H7.3056H7.30562H7.30565H7.30567H7.3057H7.30573H7.30575H7.30578H7.3058H7.30583H7.30586H7.30588H7.30591H7.30594H7.30596H7.30599H7.30602H7.30605H7.30607H7.3061H7.30613H7.30616H7.30619H7.30621H7.30624H7.30627H7.3063H7.30633H7.30636H7.30639H7.30642H7.30645H7.30648H7.3065H7.30653H7.30656H7.30659H7.30663H7.30666H7.30669H7.30672H7.30675H7.30678H7.30681H7.30684H7.30687H7.3069H7.30694H7.30697H7.307H7.30703H7.30706H7.3071H7.30713H7.30716H7.3072H7.30723H7.30726H7.3073H7.30733H7.30736H7.3074H7.30743H7.30746H7.3075H7.30753H7.30757H7.3076H7.30764H7.30767H7.30771H7.30774H7.30778H7.30781H7.30785H7.30789H7.30792H7.30796H7.308H7.30803H7.30807H7.30811H7.30814H7.30818H7.30822H7.30826H7.30829H7.30833H7.30837H7.30841H7.30845H7.30848H7.30852H7.30856H7.3086H7.30864H7.30868H7.30872H7.30876H7.3088H7.30884H7.30888H7.30892H7.30896H7.309H7.30904H7.30908H7.30912H7.30916H7.30921H7.30925H7.30929H7.30933H7.30937H7.30942H7.30946H7.3095H7.30954H7.30959H7.30963H7.30967H7.30972H7.30976H7.30981H7.30985H7.30989H7.30994H7.30998C9.95368 0.713013 12.9796 2.38351 13.7711 6.15653C14.6495 10.3471 12.31 13.9062 10.0935 16.2103C9.3008 17.0291 8.29303 17.4333 7.30235 17.4333C6.31167 17.4333 5.30391 17.0291 4.51118 16.2103C2.29495 13.9064 -0.0445173 10.3393 0.841066 6.14902ZM13.636 6.21547L13.6356 6.2136C12.8124 2.3377 9.69974 0.948737 7.30235 0.948737C4.90451 0.948737 1.79948 2.33822 0.984202 6.21417C0.106495 10.3486 2.51865 13.859 4.59221 16.0063C6.10878 17.5865 8.50363 17.5864 10.0202 16.0062C12.0859 13.8592 14.4976 10.3493 13.636 6.21547Z" fill="#368095" stroke="#02527D"/>
-            </svg>                       
+            </svg>  
+          </div>
+          <h3 class="text-lg font-semibold text-[#02527D]">المملكة العربية السعودية</h3>
+          <p class="text-[11px] text-[#02527D] mt-2">حديقة غرناطة الطريق الدائري الشرقي الرياض</p>
+          <button class="bg-[#02527D] text-white px-6 py-1 rounded-md text-sm mt-4 absolute -bottom-3 left-1/2 transform -translate-x-1/2">info&#64;email.org.sa</button>
         </div>
-        <h3 class="text-lg font-semibold text-[#02527D]">اتصل بنا</h3>
-        <p class="text-[11px] text-[#02527D] font-bold tracking-wider mt-2">المملكة العربية السعودية</p>
-        <p class="text-[10px] text-[#02527D] tracking-wider mt-2">حديقة غرناطة الطريق الدائري الشرقي الرياض</p>
-        <button class="bg-[#02527D] absolute -bottom-3 translate-x-[50%]  text-white px-6 py-1 rounded-md text-sm mt-4">info&#64;email.org.sa</button>
       </div>
-     
-      
 
-    </div>
- 
-
-  
-      <form class="space-y-6 pt-5">
-        <div class="grid grid-cols-2 gap-6">
-          <div class="col-span-2 flex flex-col gap-2">
-            <label for="name" class="block text-sm text-[#02527D]">الاسم الكامل *</label>
-            <input type="text" id="name" dir="rtl" placeholder="Moha***ed   Ahm**d  gu***a" class="w-full placeholder:text-[#0000004A] placeholder:text-sm py-2 px-4 border text-right border-[#02527D59] outline-none  rounded-sm">
+      <!-- Form -->
+      <form data-aos="fade-up" data-aos-delay="400" class="space-y-6 pt-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="col-span-1 md:col-span-2">
+            <label class="block text-sm text-[#02527D]">الاسم الكامل *</label>
+            <input type="text" class="w-full py-2 px-4 text-sm border text-right border-[#02527D59] rounded-sm" placeholder="اسمك بالكامل">
           </div>
-        
-          <div class="col-span-1 flex flex-col gap-2">
-            <label for="phone" class="block text-sm text-[#02527D]">رقم الهاتف *</label>
-
-              
-            <input type="text" id="phone" placeholder="+966 123 456 789" class="w-full placeholder:text-[#0000004A] placeholder:text-sm py-2 px-4 border text-right border-[#02527D59] outline-none  rounded-sm">
+          <div>
+            <label class="block text-sm text-[#02527D]">رقم الهاتف *</label>
+            <input type="text" class="w-full py-2 px-4 text-sm border text-right border-[#02527D59] rounded-sm" placeholder="+966 123 456 789">
           </div>
-          <div class="col-span-1 flex flex-col gap-2">
-            <label for="email" class="block text-sm text-[#02527D]">البريد الإلكتروني *</label>
-            <input type="email" id="email" placeholder="example@gmail.com" class="w-full placeholder:text-[#0000004A] placeholder:text-sm py-2 px-4 border text-right border-[#02527D59] outline-none  rounded-sm">
+          <div>
+            <label class="block text-sm text-[#02527D]">البريد الإلكتروني *</label>
+            <input type="email" class="w-full py-2 px-4 text-sm border text-right border-[#02527D59] rounded-sm" placeholder="example@email.com">
           </div>
-          <div class="col-span-2 flex flex-col gap-2">
-            <label for="company" class="block text-sm text-[#02527D]">اسم الشركة (اختياري)</label>
-            <input type="text" id="company" placeholder="Company Name" class="w-full placeholder:text-[#0000004A] placeholder:text-sm py-2 px-4 border text-right border-[#02527D59] outline-none  rounded-sm">
+          <div class="md:col-span-2">
+            <label class="block text-sm text-[#02527D]">اسم الشركة (اختياري)</label>
+            <input type="text" class="w-full py-2 px-4 text-sm border text-right border-[#02527D59] rounded-sm" placeholder="اسم الشركة">
           </div>
-          <div class="col-span-2 flex flex-col gap-2">
-            <label for="message" class="block text-sm text-[#02527D]">رسالتك</label>
-            <textarea id="message" rows="4" placeholder="Your message" class="w-full placeholder:text-[#0000004A] placeholder:text-sm py-2 px-4 border text-right border-[#02527D59] outline-none  rounded-sm"></textarea>
+          <div class="md:col-span-2">
+            <label class="block text-sm text-[#02527D]">رسالتك</label>
+            <textarea rows="4" class="w-full py-2 px-4 text-sm border text-right border-[#02527D59] rounded-sm" placeholder="اكتب رسالتك هنا..."></textarea>
           </div>
         </div>
-   
-     
-      
+
         <div class="flex justify-center">
-          <button type="submit" class="bg-[#02527D] cursor-pointer text-white py-3 w-[30%] px-6 rounded-sm hover:bg-[#02627D]">إرسال</button>
+          <button type="submit" class="bg-[#02527D] text-white py-3 px-6 w-full sm:w-[50%] md:w-[30%] rounded-sm hover:bg-[#02627D]">إرسال</button>
         </div>
       </form>
     </div>
 
-
-
-
-
-
-
-
-    <div class="col-span-4 relative overflow-hidden flex flex-1 justify-center border-[1px] rounded-md  border-[#02527D] ">
-        <div class="absolute -top-[50%] scale-x-[-1] -left-[35%]  w-[75%]  h-full opacity-10  flex items-center justify-start opacity">
-            <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
-          </div>
-        <div class="absolute -bottom-[55%] scale-x-[-] -right-[25%]  w-[75%]  h-full opacity-10  flex items-center justify-start opacity">
-            <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
-          </div>
-        <img src="assets/images/contact.png" alt="Contact Image" class="py-32">
+    <!-- Right Image -->
+    <div data-aos="fade-left" data-aos-duration="1200" class="lg:col-span-4 mt-10 lg:mt-0 relative border border-[#02527D] rounded-md overflow-hidden flex justify-center">
+      <div class="absolute -top-[50%] -left-[35%] w-[75%] h-full opacity-10">
+        <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
       </div>
+      <div class="absolute -bottom-[55%] -right-[25%] w-[75%] h-full opacity-10">
+        <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
+      </div>
+      <img src="assets/images/contact.png" alt="Contact Image" class="w-full py-20 object-contain">
+    </div>
   </div>
 </div>
 
 
-<div class="pt-30">
-  <hr class="mt-30 w-[90%] mx-auto border">
+  <hr class="mt-10 w-[90%] mx-auto border">
 
   <app-address></app-address>
-  
-</div>

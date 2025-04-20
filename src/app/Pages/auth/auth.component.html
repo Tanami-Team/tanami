@@ -1,16 +1,22 @@
-<div class="flex flex-col justify-center  w-[60%] mx-auto pt-28  h-screen">
-    <div class="flex justify-around items-center mb-6 gap-5">
-      <a routerLink="/">
-        <img src="assets/images/colorLogo.png" alt="جمعية" class="">
-      </a>
-      <button class="bg-[#02527D] text-white py-1.5 px-6 rounded-2xl text-lg ">
-        تسجيل الدخول
-      </button>
+<div class="flex flex-col justify-center items-center pt-28 min-h-screen px-4 max-w-screen-md mx-auto">
+  
+  <!-- Logo & Login Button -->
+  <div class="flex flex-col sm:flex-row justify-between items-center w-full mb-8 gap-4">
+    <a routerLink="/">
+      <img src="assets/images/colorLogo.png" alt="جمعية" class="h-16 object-contain" />
+    </a>
+    <button class="bg-[#02527D] text-white py-2 px-6 rounded-2xl text-base sm:text-lg">
+      تسجيل الدخول
+    </button>
+  </div>
 
-    </div>
-    <div class="flex justify-around  pb-28">
-        <a  routerLink="Individual_login" [queryParams]="{ type: 'individual' }"  class="flex flex-col items-center gap-4 bg-white hover:bg-[#02527D] hover:text-white text-[#02527D] border border-[#02527D] p-16 px-20 rounded-md cursor-pointer transition-all duration-300 transform hover:scale-105">
-            <svg width="134" height="134" viewBox="0 0 134 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Options (فرد / جمعية) -->
+  <div class="flex flex-col md:flex-row justify-around items-center w-full gap-6 md:gap-12 pb-16">
+    
+    <!-- فرد -->
+    <a routerLink="Individual_login" [queryParams]="{ type: 'individual' }"
+      class="flex flex-col items-center gap-4 bg-white hover:bg-[#02527D] hover:text-white text-[#02527D] border border-[#02527D] p-10 md:p-16 rounded-md cursor-pointer transition-all duration-300 transform hover:scale-105 w-full md:w-auto">
+   <svg width="134" height="134" viewBox="0 0 134 134" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M72.5827 127.021H27.916C14.4043 127.021 6.97852 119.595 6.97852 106.083V61.4167C6.97852 47.905 14.4043 40.4792 27.916 40.4792H55.8327C58.1218 40.4792 60.0202 42.3775 60.0202 44.6667V106.083C60.0202 114.905 63.761 118.646 72.5827 118.646C74.8718 118.646 76.7702 120.544 76.7702 122.833C76.7702 125.123 74.8718 127.021 72.5827 127.021ZM27.916 48.8542C19.0943 48.8542 15.3535 52.595 15.3535 61.4167V106.083C15.3535 114.905 19.0943 118.646 27.916 118.646H54.7159C52.7059 115.352 51.6452 111.164 51.6452 106.083V48.8542H27.916Z" fill="currentColor"/>
                 <path d="M55.8327 48.8541H27.916C25.6268 48.8541 23.7285 46.9558 23.7285 44.6666V33.5C23.7285 25.0133 30.596 18.1458 39.0827 18.1458H56.4468C57.7309 18.1458 58.9594 18.7599 59.7411 19.7649C60.5228 20.8257 60.8018 22.1658 60.4668 23.3942C60.1318 24.6225 60.0202 26.0183 60.0202 27.9166V44.6666C60.0202 46.9558 58.1218 48.8541 55.8327 48.8541ZM32.1035 40.4791H51.6452V27.9166C51.6452 27.4141 51.6452 26.9675 51.6452 26.5208H39.0827C35.2302 26.5208 32.1035 29.6475 32.1035 33.5V40.4791Z" fill="currentColor"/>
                 <path d="M78.166 76.7709C75.8768 76.7709 73.9785 74.8725 73.9785 72.5834V44.6667C73.9785 42.3775 75.8768 40.4792 78.166 40.4792C80.4552 40.4792 82.3535 42.3775 82.3535 44.6667V72.5834C82.3535 74.8725 80.4552 76.7709 78.166 76.7709Z" fill="currentColor"/>
@@ -19,11 +25,13 @@
                 <path d="M33.5 99.1041C31.2108 99.1041 29.3125 97.2058 29.3125 94.9166V72.5833C29.3125 70.2941 31.2108 68.3958 33.5 68.3958C35.7892 68.3958 37.6875 70.2941 37.6875 72.5833V94.9166C37.6875 97.2058 35.7892 99.1041 33.5 99.1041Z" fill="currentColor"/>
                 <path d="M106.084 127.021H72.584C59.0723 127.021 51.6465 119.595 51.6465 106.083V27.9167C51.6465 14.405 59.0723 6.97919 72.584 6.97919H106.084C119.596 6.97919 127.021 14.405 127.021 27.9167V106.083C127.021 119.595 119.596 127.021 106.084 127.021ZM72.584 15.3542C63.7623 15.3542 60.0215 19.095 60.0215 27.9167V106.083C60.0215 114.905 63.7623 118.646 72.584 118.646H106.084C114.906 118.646 118.646 114.905 118.646 106.083V27.9167C118.646 19.095 114.906 15.3542 106.084 15.3542H72.584Z" fill="currentColor"/>
                 </svg>
-                        
-                <p class="text-xl font-semibold">فرد</p>
-              </a>
-          <a  routerLink="Individual_login"  [queryParams]="{ type: 'association' }" class="flex flex-col items-center gap-4  bg-white hover:bg-[#02527D] hover:text-white text-[#02527D] border border-[#02527D] p-16 px-20 rounded-md cursor-pointer transition-all duration-300 transform hover:scale-105">
-            <svg width="134" height="134" viewBox="0 0 134 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <p class="text-xl font-semibold">فرد</p>
+    </a>
+
+    <!-- جمعية -->
+    <a routerLink="Individual_login" [queryParams]="{ type: 'association' }"
+      class="flex flex-col items-center gap-4 bg-white hover:bg-[#02527D] hover:text-white text-[#02527D] border border-[#02527D] p-10 md:p-16 rounded-md cursor-pointer transition-all duration-300 transform hover:scale-105 w-full md:w-auto">
+       <svg width="134" height="134" viewBox="0 0 134 134" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M72.5827 127.021H27.916C14.4043 127.021 6.97852 119.595 6.97852 106.083V61.4167C6.97852 47.905 14.4043 40.4792 27.916 40.4792H55.8327C58.1218 40.4792 60.0202 42.3775 60.0202 44.6667V106.083C60.0202 114.905 63.761 118.646 72.5827 118.646C74.8718 118.646 76.7702 120.544 76.7702 122.833C76.7702 125.123 74.8718 127.021 72.5827 127.021ZM27.916 48.8542C19.0943 48.8542 15.3535 52.595 15.3535 61.4167V106.083C15.3535 114.905 19.0943 118.646 27.916 118.646H54.7159C52.7059 115.352 51.6452 111.164 51.6452 106.083V48.8542H27.916Z" fill="currentColor"/>
             <path d="M55.8327 48.8541H27.916C25.6268 48.8541 23.7285 46.9558 23.7285 44.6666V33.5C23.7285 25.0133 30.596 18.1458 39.0827 18.1458H56.4468C57.7309 18.1458 58.9594 18.7599 59.7411 19.7649C60.5228 20.8257 60.8018 22.1658 60.4668 23.3942C60.1318 24.6225 60.0202 26.0183 60.0202 27.9166V44.6666C60.0202 46.9558 58.1218 48.8541 55.8327 48.8541ZM32.1035 40.4791H51.6452V27.9166C51.6452 27.4141 51.6452 26.9675 51.6452 26.5208H39.0827C35.2302 26.5208 32.1035 29.6475 32.1035 33.5V40.4791Z" fill="currentColor"/>
             <path d="M78.166 76.7709C75.8768 76.7709 73.9785 74.8725 73.9785 72.5834V44.6667C73.9785 42.3775 75.8768 40.4792 78.166 40.4792C80.4552 40.4792 82.3535 42.3775 82.3535 44.6667V72.5834C82.3535 74.8725 80.4552 76.7709 78.166 76.7709Z" fill="currentColor"/>
@@ -31,15 +39,14 @@
             <path d="M100.499 127.021H78.166C75.8768 127.021 73.9785 125.123 73.9785 122.833V100.5C73.9785 95.14 78.3893 90.7292 83.7493 90.7292H94.916C100.276 90.7292 104.687 95.14 104.687 100.5V122.833C104.687 125.123 102.789 127.021 100.499 127.021ZM82.3535 118.646H96.3118V100.5C96.3118 99.7184 95.6977 99.1042 94.916 99.1042H83.7493C82.9677 99.1042 82.3535 99.7184 82.3535 100.5V118.646Z" fill="currentColor"/>
             <path d="M33.5 99.1041C31.2108 99.1041 29.3125 97.2058 29.3125 94.9166V72.5833C29.3125 70.2941 31.2108 68.3958 33.5 68.3958C35.7892 68.3958 37.6875 70.2941 37.6875 72.5833V94.9166C37.6875 97.2058 35.7892 99.1041 33.5 99.1041Z" fill="currentColor"/>
             <path d="M106.084 127.021H72.584C59.0723 127.021 51.6465 119.595 51.6465 106.083V27.9167C51.6465 14.405 59.0723 6.97919 72.584 6.97919H106.084C119.596 6.97919 127.021 14.405 127.021 27.9167V106.083C127.021 119.595 119.596 127.021 106.084 127.021ZM72.584 15.3542C63.7623 15.3542 60.0215 19.095 60.0215 27.9167V106.083C60.0215 114.905 63.7623 118.646 72.584 118.646H106.084C114.906 118.646 118.646 114.905 118.646 106.083V27.9167C118.646 19.095 114.906 15.3542 106.084 15.3542H72.584Z" fill="currentColor"/>
-            </svg>      
-              <p class="text-xl font-semibold">جمعية</p>
-          </a>
- 
-    </div>
-  
-    <hr>
-    <div class=" text-center flex justify-center items-end pt-5">
-        <p class="text-[#02527D] text-sm">© 2024 تنامي - جميع الحقوق محفوظة</p>
-            </div>
+            </svg>   
+      <p class="text-xl font-semibold">جمعية</p>
+    </a>
   </div>
-  
+
+  <!-- Footer -->
+  <div class="w-full border-t border-gray-300 pt-4 mt-auto text-center">
+    <p class="text-[#02527D] text-sm">© 2024 تنامي - جميع الحقوق محفوظة</p>
+  </div>
+
+</div>

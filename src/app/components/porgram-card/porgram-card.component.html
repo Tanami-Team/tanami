@@ -6,9 +6,13 @@
     
   </div>
 
-    <div class="grid grid-cols-3 py-10 gap-10  mx-auto">
-        <div *ngFor="let card of cardData" class="bg-white rounded-2xl shadow-xl overflow-hidden w-full mx-auto pb-3">
-          <!-- Header Section with Gradient Background -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 py-10 w-full  mx-auto">
+<div 
+  *ngFor="let card of cardData; let i = index" 
+  class="bg-white rounded-2xl shadow-xl overflow-hidden w-full mx-auto pb-4"
+  [attr.data-aos]="'fade-up'"
+  [attr.data-aos-delay]="(i * 100)"
+  data-aos-duration="800">          <!-- Header Section with Gradient Background -->
           <div class="text-white">
             <div class="flex items-center justify-between">
               <img [src]="card.image" alt="Logo" class="w-full" />

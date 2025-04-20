@@ -1,38 +1,40 @@
-<section class="grid grid-cols-12 items-center h-[45vh] text-white  relative" style="background: url('assets/images/aboutHeader.png'); background-size: cover; background-position: center;">
-    <!-- Overlay Layer with color and opacity -->
-    <div class="absolute inset-0 bg-[#022334ED] opacity-[0.93] z-0"></div>
+<section class="grid grid-cols-1 md:grid-cols-12 items-center min-h-[45vh] text-white relative" 
+         style="background: url('assets/images/aboutHeader.png'); background-size: cover; background-position: center;">
   
-    <div class="col-span-6  relative z-10 w-fit mx-auto">
-        <h2 class="relative w-fit p-4 text-4xl  flex items-center justify-center" >
-    
-            <!-- Left Yellow Decoration -->
-            <div class="absolute right-0 top-1">
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H18C22.9706 0 27 4.02944 27 9V27L24.8682 9.94595C24.3576 5.86045 21.1396 2.64244 17.0541 2.13176L0 0Z" fill="#FFD156"/>
-                </svg>
-            </div>
-        
-            <!-- Right Yellow Decoration (Shown if `showRightDecoration` is true) -->
-            <div  class="absolute left-0 top-1">
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27 0H9C4.02944 0 0 4.02944 0 9V27L2.13176 9.94595C2.64244 5.86045 5.86045 2.64244 9.94595 2.13176L27 0Z" fill="#FFD156"/>
-                </svg>            
-            </div>
-          
-            عن الجمعية     
-        </h2>
-        
-    </div>
-    <div class="col-span-6 flex flex-col gap-5  relative z-10">
-        <h2 class="text-lg font-bold ">الجمعية الخيرية لتطوير العمل التنموي تنامي</h2>
-      <div class="relative z-10">
-        <p class="text-[#dfdddd] text-sm w-[85%]">
-          الجمعية الخيرية لتطوير العمل التنموي تنامي جمعية متخصصة تهدف إلى تطوير الموارد البشرية والتنمية الاجتماعية.
-          تعمل على دعم الأعمال غير الربحية من خلال شراكات مبتكرة ومؤسسية تسعى لتحقيق التأثير المجتمعي المستدام.
-        </p>
-      </div>
-    </div>
-  
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-[#022334ED] opacity-[0.93] z-0"></div>
 
-  </section>
-  
+  <!-- العنوان -->
+  <div  data-aos="fade-down"
+    data-aos-duration="800" class="md:col-span-6 relative z-10 w-full flex justify-center py-6 md:py-0">
+    <h2 class="relative w-fit px-6 py-4 text-2xl sm:text-3xl md:text-4xl font-bold flex items-center justify-center">
+      <!-- يمين -->
+      <div class="absolute right-0 top-1">
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+          <path d="M0 0H18C22.9706 0 27 4.02944 27 9V27L24.8682 9.94595C24.3576 5.86045 21.1396 2.64244 17.0541 2.13176L0 0Z" fill="#FFD156"/>
+        </svg>
+      </div>
+      <!-- يسار -->
+      <div class="absolute left-0 top-1">
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+          <path d="M27 0H9C4.02944 0 0 4.02944 0 9V27L2.13176 9.94595C2.64244 5.86045 5.86045 2.64244 9.94595 2.13176L27 0Z" fill="#FFD156"/>
+        </svg>
+      </div>
+      عن الجمعية
+    </h2>
+  </div>
+
+  <!-- النص التعريفي -->
+  <div    data-aos="fade-left"
+    data-aos-delay="300"
+    data-aos-duration="1000" class="md:col-span-6 flex flex-col gap-4 relative z-10 px-6 md:px-0 pb-6 md:pb-0">
+    <h2 class="text-base sm:text-lg font-bold">
+      الجمعية الخيرية لتطوير العمل التنموي تنامي
+    </h2>
+    <p class="text-[#dfdddd] text-sm leading-relaxed max-w-xl">
+      الجمعية الخيرية لتطوير العمل التنموي تنامي جمعية متخصصة تهدف إلى تطوير الموارد البشرية والتنمية الاجتماعية.
+      تعمل على دعم الأعمال غير الربحية من خلال شراكات مبتكرة ومؤسسية تسعى لتحقيق التأثير المجتمعي المستدام.
+    </p>
+  </div>
+
+</section>

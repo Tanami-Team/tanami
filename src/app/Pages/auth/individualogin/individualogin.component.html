@@ -1,6 +1,6 @@
-<div class="grid grid-cols-12  items-center   bg-white">
+<div class="grid grid-cols-1 md:grid-cols-12 bg-white min-h-screen items-center">
 
-  <div class=" col-span-7 bg-white flex flex-col  w-[75%] mx-auto  p-2">
+  <div class="md:col-span-7 flex flex-col w-full max-w-3xl mx-auto px-4 py-8">
     <a routerLink="/Auth" class=" ms-auto border p-2 rounded-full border-[#02527D] text-[#02527D] hover:bg-[#02527D] hover:text-white">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.844996 7.69206C0.493525 7.34059 0.493525 6.77074 0.844996 6.41927L6.57256 0.691704C6.92403 0.340232 7.49388 0.340232 7.84535 0.691704C8.19683 1.04318 8.19683 1.61302 7.84535 1.9645L2.75418 7.05566L7.84535 12.1468C8.19683 12.4983 8.19683 13.0682 7.84535 13.4196C7.49388 13.7711 6.92403 13.7711 6.57256 13.4196L0.844996 7.69206ZM13.6973 7.95566L1.48139 7.95566L1.48139 6.15566L13.6973 6.15566L13.6973 7.95566Z" fill="currentColor"/>
@@ -8,13 +8,14 @@
           
           
       </a>
-    <div class="flex justify-between items-center mb-6">
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
         <div class="flex items-center gap-2">
           <a routerLink="/">
             <img src="assets/images/colorLogo.png" alt="جمعية" class="">
-          </a>        </div>
+          </a>        
+        </div>
 
-        <div class="flex justify-between gap-5">
+      <div class="flex gap-3 flex-wrap justify-center">
 
             <div>
                 <button class="bg-[#02527D] text-white py-1 px-6 rounded-xl text-sm">
@@ -54,7 +55,7 @@
       </div>
 
     <div>
-      <form class="grid grid-cols-2 gap-2.5 w-[65%] py-10 mx-auto ">
+    <form class="w-full py-6 grid grid-cols-1 gap-4  mx-auto  md:w-[65%] sm:grid-cols-2 sm:gap-5">
         <div class="col-span-2 w-full">
             <app-inputs
             labelText="الاسم"

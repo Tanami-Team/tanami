@@ -10,13 +10,22 @@ import { FeatureSectionComponent } from "../../components/Home/feature-section/f
 
 @Component({
   selector: 'app-home',
-  imports: [MainHomeComponent, AboutHomeComponent, AddressComponent, HighlightedNumbersComponent, AssociationDepartmentsComponent, ContactUsComponent, CarouselComponent, FeatureSectionComponent],
+  imports: [
+    MainHomeComponent,
+    AboutHomeComponent,
+    AddressComponent,
+    HighlightedNumbersComponent,
+    AssociationDepartmentsComponent,
+    ContactUsComponent,
+    CarouselComponent,
+    FeatureSectionComponent,
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent {
   myProducts = [
-    { name: 'Product 1',image: 'assets/images/about.png'},
+    { name: 'Product 1', image: 'assets/images/about.png' },
     // { name: 'Product 2', image: 'assets/images/teamofcollobrations.png'},
     { name: 'Product 3', image: 'assets/images/prod1.png' },
     { name: 'Product 3', image: 'assets/images/prod1.png' },

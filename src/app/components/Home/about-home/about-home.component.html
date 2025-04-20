@@ -1,105 +1,149 @@
-<div class="relative bg-white w-[85%] mx-auto">
-    <!-- Header Section -->
- 
-      
-    <div [ngClass]="about ? 'mt-40 relative' : 'mt-5'">
-      <div [ngClass]="about ? '-right-64 -bottom-44' : '-right-56'"   class="absolute  scale-x-[-1] h-full w-[25%] flex items-center justify-start opacity-5 brightness-15">
-      <img src="assets/images/iconsHome.png" class="w-full h-auto object-contain" alt="Background Icons">
+<div class=" relative bg-white w-[90%] md:w-[85%] mx-auto">
+  <!-- Header Section -->
+
+  <div [ngClass]="about ? 'mt-50 relative' : 'mt-5'">
+    <div
+      [ngClass]="about ? '-right-64 -bottom-44' : '-right-56'"
+      class="absolute scale-x-[-1] h-full w-[25%] flex items-center justify-start opacity-5 brightness-15"
+    >
+      <img
+        src="assets/images/iconsHome.png"
+        class="w-full h-auto object-contain"
+        alt="Background Icons"
+      />
     </div>
-    <div *ngIf="about" class="container mx-auto px-6 grid grid-cols-8 items-center  mt-10">
-  
+    <div
+      *ngIf="about"
+      class="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-8 items-center gap-8 mt-10"
+    data-aos="fade-left"
+    data-aos-duration="1000"
+      >
+      <!-- Image Container -->
+      <div
+        class="col-span-4 flex justify-center md:justify-end relative items-center"
+      >
+        <div class="relative w-[90%] md:w-full">
+          <div
+            class="absolute bottom-2 left-[15%] w-[95%] h-[80%] border rounded-2xl border-yellow-400 rounded-tl-[40%] rounded-br-[40%]"
+          ></div>
 
-
-    <!-- Image Container -->
-    <div class=" flex w-full col-span-4 justify-end relative items-center">
-        <div class="relative  ">
-            <div class="absolute bottom-2 left-[15%] w-[95%] h-[80%] border rounded-2xl border-yellow-400 rounded-tl-[40%] rounded-br-[40%]"></div>
-
-          <div class="absolute -bottom-0 left-[20%]  w-[90%] h-[75%] rounded-tl-[40%] rounded-br-[40%] bg-[#02527D] rounded-lg"></div>
-          <img src="assets/images/personAbout.png" alt="Person" 
-          class="relative w-full   mx-auto rounded-lg   scale-x-[-1]">
-            </div>
+          <div
+            class="absolute -bottom-0 left-[20%] w-[90%] h-[75%] rounded-tl-[40%] rounded-br-[40%] bg-[#02527D] rounded-lg"
+          ></div>
+          <img
+            src="assets/images/personAbout.png"
+            alt="Person"
+            class="relative w-full mx-auto rounded-lg scale-x-[-1]"
+          />
+        </div>
       </div>
 
-        <!-- Text Content -->
-        <div class=" text-right col-span-4 flex flex-col ">
-            <app-section-title mainText="عن" secondaryText="الجمعية" [showRightDecoration]="true"></app-section-title>
+      <!-- Text Content -->
+      <div   data-aos="fade-right"
+    data-aos-duration="1000" class="col-span-4 text-right flex flex-col gap-4 px-4 md:px-0">
+        <app-section-title
+          mainText="عن"
+          secondaryText="الجمعية"
+          [showRightDecoration]="true"
+        ></app-section-title>
 
-              
-          <p class="mt-2 text-lg font-semibold text-[#02527D]">
-            الجمعية الخيرية لتطوير العمل التنموي تنامي
+        <p class="mt-2 text-lg font-semibold text-[#02527D]">
+          الجمعية الخيرية لتطوير العمل التنموي تنامي
+        </p>
+        <p class="mt-4 text-[#383838] leading-loose">
+          الجمعية الخيرية لتطوير العمل التنموي تنامي جمعية أهلية مرخصة من وزارة
+          الموارد البشرية والتنمية الاجتماعية، وتعتمد جمعية تنامي من أوائل وأبرز
+          الجمعيات المتخصصة في مجال تطوير وتمكين القطاع غير الربحي. وأثبتت
+          جذورها في القطاع وأنشأت ظروفها في تطوير العمل التنموي خلال فترة وجيزة،
+          بمخرجات مستندة على مدخلات وخبرات وتجارب سنوات طويلة اكتسبها فريق عمل
+          تنامي.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center gap-10 mt-10">
+      <!-- If 'about' is true, show the first layout -->
+      <div
+        *ngIf="about"
+        class="w-full lg:w-1/2 px-4 md:px-6 flex flex-col gap-6 text-right"
+         data-aos="fade-right" data-aos-duration="800"
+      >
+        <div class="w-full text-right">
+          <app-section-title
+            mainText=""
+            secondaryText="رؤيتنا"
+            [showRightDecoration]="false"
+            [mainheader]="false"
+          ></app-section-title>
+          <p class="text-[#383838] leading-loose">تمتين القطاع التنموي</p>
+        </div>
+        <div class="w-full text-right">
+          <app-section-title
+            mainText=""
+        
+            secondaryText="رسالتنا"
+            [showRightDecoration]="false"
+            [mainheader]="false"
+          ></app-section-title>
+          <p
+            class="text-[#383838] leading-loose text-sm md:text-base lg:w-[100%]"
+          >
+            جمعية متخصصة تسعى إلى تطوير القطاع غير الربحي وتمكينه عبر مبادرات
+            مبتكرة وعمل مؤسسي جاذب وبناء شراكات مستدامة.
           </p>
-          <p class="mt-4 text-[#383838] leading-loose">
-            الجمعية الخيرية لتطوير العمل التنموي تنامي جمعية أهلية مرخصة من وزارة الموارد البشرية والتنمية الاجتماعية، 
-            وتعتمد جمعية تنامي من أوائل وأبرز الجمعيات المتخصصة في مجال تطوير وتمكين القطاع غير الربحي. 
-            وأثبتت جذورها في القطاع وأنشأت ظروفها في تطوير العمل التنموي خلال فترة وجيزة، بمخرجات مستندة 
-            على مدخلات وخبرات وتجارب سنوات طويلة اكتسبها فريق عمل تنامي.
+        </div>
+      </div>
+
+      <!-- Else, show the second layout -->
+      <div *ngIf="!about" class="container px-6 flex justify-center"
+          [attr.data-aos]="about ? 'zoom-in' : 'fade-left'"
+    data-aos-duration="800"
+      >
+        <img
+          src="assets/images/about.png"
+          alt="Decorative Image"
+          class="w-[65%]"
+        />
+      </div>
+      <div *ngIf="about" class="container px-6 flex justify-center"
+          [attr.data-aos]="about ? 'zoom-in' : 'fade-left'"
+    data-aos-duration="800">
+        <img
+          src="assets/images/about.png"
+          alt="Decorative Image"
+          class="w-[65%]"
+        />
+      </div>
+
+      <div
+        *ngIf="!about"
+        class="w-full px-4 md:px-6 flex flex-col gap-6 text-right"
+        data-aos="fade-left" data-aos-duration="800"
+      >
+        <div class="w-full text-right">
+          <app-section-title
+            mainText=""
+            secondaryText="رؤيتنا"
+            [showRightDecoration]="false"
+            [mainheader]="false"
+          ></app-section-title>
+          <p class="text-[#383838] leading-loose">تمتين القطاع التنموي</p>
+        </div>
+        <div class="w-full text-right">
+          <app-section-title
+            mainText=""
+            secondaryText="رسالتنا"
+            [showRightDecoration]="false"
+            [mainheader]="false"
+          ></app-section-title>
+          <p
+            class="text-[#383838] leading-loose text-sm md:text-base w-full lg:w-[100%]"
+          >
+            جمعية متخصصة تسعى إلى تطوير القطاع غير الربحي وتمكينه عبر مبادرات
+            مبتكرة وعمل مؤسسي جاذب وبناء شراكات مستدامة.
           </p>
         </div>
-      
-    
-      
       </div>
-      
-      <div class="flex items-center  ">
-        <!-- If 'about' is true, show the first layout -->
-        <div *ngIf="about" class="container px-6 flex flex-col gap-6 items-stretch">
-          <div class="w-full text-right">
-            <app-section-title
-              mainText=""
-              secondaryText="رؤيتنا"
-              [showRightDecoration]="false"
-              [mainheader]="false"
-            ></app-section-title>
-            <p class="text-[#383838] leading-loose">تمتين القطاع التنموي</p>
-          </div>
-          <div class="w-full text-right">
-            <app-section-title
-              mainText=""
-              secondaryText="رسالتنا"
-              [showRightDecoration]="false"
-              [mainheader]="false"
-            ></app-section-title>
-            <p class="text-[#383838] leading-loose text- w-[65%]">
-              جمعية متخصصة تسعى إلى تطوير القطاع غير الربحي وتمكينه عبر مبادرات مبتكرة وعمل مؤسسي جاذب وبناء شراكات مستدامة.
-            </p>
-          </div>
-        </div>
-      
-        <!-- Else, show the second layout -->
-        <div *ngIf="!about" class="container px-6 flex justify-center">
-          <img src="assets/images/about.png" alt="Decorative Image" class="w-full" />
-        </div>
-        <div *ngIf="about" class="container px-6 flex justify-center">
-          <img src="assets/images/about.png" alt="Decorative Image" class="w-full" />
-        </div>
-      
-        <div *ngIf="!about" class="container  px-6 flex flex-col gap-8 ">
-          <div class="w-full text-right">
-            <app-section-title
-              mainText=""
-              secondaryText="رؤيتنا"
-              [showRightDecoration]="false"
-              [mainheader]="false"
-            ></app-section-title>
-            <p class="text-[#383838] leading-loose">تمتين القطاع التنموي</p>
-          </div>
-          <div class="w-full text-right">
-            <app-section-title
-              mainText=""
-              secondaryText="رسالتنا"
-              [showRightDecoration]="false"
-              [mainheader]="false"
-            ></app-section-title>
-            <p class="text-[#383838] leading-loose text- w-[85%]">
-              جمعية متخصصة تسعى إلى تطوير القطاع غير الربحي وتمكينه عبر مبادرات مبتكرة وعمل مؤسسي جاذب وبناء شراكات مستدامة.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-
-</div>
-
+    </div>
   </div>
-  
+</div>
